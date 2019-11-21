@@ -1,0 +1,114 @@
+{
+  "config": [
+    {
+      "name": "GamerAddRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        },
+        {
+          "field": "Hero",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerAddRoomC2S"
+    },
+    {
+      "name": "GamerLoginC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Session",
+          "type": "string"
+        },
+        {
+          "field": "Addr",
+          "type": "string"
+        }
+      ],
+      "title": "GamerLoginC2S"
+    },
+    {
+      "name": "GamerLoginS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Main",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerLoginS2C"
+    },
+    {
+      "name": "GamerLoginGetDataS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Time",
+          "type": "ptr"
+        },
+        {
+          "field": "FriendReqs",
+          "type": "slice"
+        },
+        {
+          "field": "Friends",
+          "type": "slice"
+        },
+        {
+          "field": "Heros",
+          "type": "slice"
+        },
+        {
+          "field": "Items",
+          "type": "slice"
+        },
+        {
+          "field": "LengthRank",
+          "type": "int32"
+        },
+        {
+          "field": "Length",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerLoginGetDataS2C"
+    },
+    {
+      "name": "pb",
+      "properties": [
+        {
+          "field": "GamerAddRoomC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginGetDataS2C",
+          "type": "struct"
+        }
+      ],
+      "title": "pb"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "pb",
+  "properties": [
+    {
+      "field": "User",
+      "type": "struct"
+    }
+  ]
+}

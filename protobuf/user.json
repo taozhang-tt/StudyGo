@@ -1,0 +1,32 @@
+{
+  "config": [
+    {
+      "name": "GamerAddRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        },
+        {
+          "field": "Hero",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerAddRoomC2S"
+    },
+    {
+      "name": "pb",
+      "properties": [
+        {
+          "field": "GamerAddRoomC2S",
+          "type": "struct"
+        }
+      ],
+      "title": "pb"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocketK客户端</title>
+    <script type="text/javascript">
+        var ws;
+        var startConn = function () {
+            ws = new WebSocket("wss://tc-editor-api-ready.123u.com/ws/instance?project_id=0");
+            ws.onopen = function () {
+                console.log("open")
+            };
+            ws.onclose = function () {
+                console.log("close")
+            };
+            ws.onmessage = function (ev) {
+                console.log(ev.data);
+                var ele = document.createElement("div")
+                ele.innerHTML = ev.data;
+                document.getElementsByClassName("output")[0].append(ele)
+            }
+        };
+        var sendMsg = function () {
+            var data = document.getElementsByClassName("input")[0].value;
+            ws.send(data)
+        };
+
+    </script>
+</head>
+<body>
+<div>
+    <span>输入：</span>
+    <input class="input" value="hello world!">
+    <input type="button" value="发送" onclick="sendMsg()">
+    <input type="button" value="开始" onclick="startConn()">
+    <input type="button" value="结束">
+    <div class="output"></div>
+</div>
+
+</body>
+</html>
