@@ -8,6 +8,7 @@ import (
 	"github.com/elastic/go-elasticsearch/v7"
 	"github.com/elastic/go-elasticsearch/v7/esapi"
 	"log"
+	"strconv"
 	"strings"
 )
 
@@ -15,19 +16,17 @@ type EsClient struct {
 	client *elasticsearch.Client
 }
 
-
 type Content struct {
-	Id string `json:"id"`
-	GroupId float64 `json:"group_id"`
-	Name string `json:"name"`
-	Answer string `json:"answer"`
-	Single float64 `json:"single"`
-	LinkTable string `json:"link_table"`
-	Status float64 `json:"status"`
-	TemplateId float64 `json:"template_id"`
-	CreatedAt string `json:"created_at"`
-	UpdatedAt float64 `json:"updated_at"`
-	Words float64 `json:"words"`
+	KeywordId  string `json:"keyword_id"`
+	GroupId    string `json:"group_id"`
+	Name       string `json:"name"`
+	Answer     string `json:"answer"`
+	Single     string `json:"single"`
+	LinkTable  string `json:"link_table"`
+	Status     string `json:"status"`
+	TemplateId string `json:"template_id"`
+	CreatedAt  string `json:"created_at"`
+	UpdatedAt  string `json:"updated_at"`
 }
 
 func NewClient(ip string, port string) (client *EsClient, err error) {
@@ -56,13 +55,15 @@ func (o *EsClient) GetClientInfo() (ret string, err error) {
 	return
 }
 
-func (o *EsClient) AddDocument(index string, ty string, data string) (err error) {
+func (o *EsClient) AddDocument(index string, ty string, idInt int, data string) (err error) {
 	//doc, err := json.Marshal(data)
 	if err != nil {
 		return
 	}
+	id := strconv.Itoa(idInt)
 	req := esapi.IndexRequest{
 		Index:        index,
+		DocumentID:   id,
 		DocumentType: ty,
 		Body:         strings.NewReader(string(data)),
 	}
@@ -78,8 +79,8 @@ func (o *EsClient) GetDocument(indexName string, query string) {
 	indexes = append(indexes, "test_go")
 	param := `{"query":{"match":{"name":"类型类似"}},"highlight":{"fields":{"name":{}}}}`
 	req := esapi.SearchRequest{
-		Index:indexes,
-		Body:strings.NewReader(param),
+		Index: indexes,
+		Body:  strings.NewReader(param),
 	}
 	res, err := req.Do(context.Background(), o.client)
 
@@ -90,7 +91,7 @@ func (o *EsClient) GetDocument(indexName string, query string) {
 	//	o.client.Search.WithTrackTotalHits(true),
 	//	o.client.Search.WithPretty(),
 	//)
-	if err != nil{
+	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(res)
@@ -149,12 +150,12 @@ func (o *EsClient) GetByField(fieldName string, fieldValue string, indexName str
 	}
 }
 
-func (o *EsClient)GetByQuery(query string, indexName string) (contents []*Content, err error) {
+func (o *EsClient) GetByQuery(query string, indexName string) (contents []*Content, err error) {
 	indexes := make([]string, 0)
 	indexes = append(indexes, indexName)
 	req := esapi.SearchRequest{
-		Index:indexes,
-		Body:strings.NewReader(query),
+		Index: indexes,
+		Body:  strings.NewReader(query),
 	}
 	res, err := req.Do(context.Background(), o.client)
 	defer res.Body.Close()
@@ -181,23 +182,21 @@ func (o *EsClient)GetByQuery(query string, indexName string) (contents []*Conten
 		id := hit.(map[string]interface{})["_id"]
 		source := hit.(map[string]interface{})["_source"]
 		content := &Content{
-			Id: id.(string),
-			GroupId:source.(map[string]interface{})["group_id"].(float64),
-			Name:source.(map[string]interface{})["name"].(string),
-			Answer:source.(map[string]interface{})["answer"].(string),
-			Single:source.(map[string]interface{})["single"].(float64),
-			LinkTable:source.(map[string]interface{})["link_table"].(string),
-			Status:source.(map[string]interface{})["status"].(float64),
-			TemplateId:source.(map[string]interface{})["template_id"].(float64),
-			CreatedAt:source.(map[string]interface{})["created_at"].(string),
-			UpdatedAt:source.(map[string]interface{})["updated_at"].(float64),
-			Words:source.(map[string]interface{})["words"].(float64),
+			KeywordId:  GetInterfaceValue(id),
+			GroupId:    GetInterfaceValue(source.(map[string]interface{})["group_id"]),
+			Name:       GetInterfaceValue(source.(map[string]interface{})["name"]),
+			Answer:     GetInterfaceValue(source.(map[string]interface{})["answer"].(string)),
+			Single:     GetInterfaceValue(source.(map[string]interface{})["single"]),
+			LinkTable:  GetInterfaceValue(source.(map[string]interface{})["link_table"]),
+			Status:     GetInterfaceValue(source.(map[string]interface{})["status"]),
+			TemplateId: GetInterfaceValue(source.(map[string]interface{})["template_id"]),
+			CreatedAt:  GetInterfaceValue(source.(map[string]interface{})["created_at"]),
+			UpdatedAt:  GetInterfaceValue(source.(map[string]interface{})["updated_at"]),
 		}
 		contents = append(contents, content)
 	}
 	return
 }
-
 
 func (o *EsClient) GetClient() *elasticsearch.Client {
 	return o.client
@@ -217,7 +216,18 @@ func (o *EsClient) AddIndex(index string, indexConfig interface{}) (err error) {
 		return
 	}
 	if res.StatusCode != 200 {
-		return err
+		var e map[string]interface{}
+		if err := json.NewDecoder(res.Body).Decode(&e); err != nil {
+			log.Fatalf("Error parsing the response body: %s", err)
+
+		} else {
+			// Print the response status and error information.
+			log.Fatalf("[%s] %s: %s",
+				res.Status(),
+				e["error"].(map[string]interface{})["type"],
+				e["error"].(map[string]interface{})["reason"],
+			)
+		}
 	}
 	return
 }
@@ -234,6 +244,35 @@ func (o *EsClient) ExistIndex(indexName string) (exist bool, err error) {
 	}
 	if res.StatusCode == 200 {
 		exist = true
+	}
+	return
+}
+
+func GetInterfaceValue(intF interface{}) (data string) {
+	switch intF.(type) {
+	case int:
+		value := intF.(int)
+		data = strconv.Itoa(value)
+	case int8:
+		value := intF.(int8)
+		data = strconv.FormatInt(int64(value), 10)
+	case int16:
+		value := intF.(int16)
+		data = strconv.FormatInt(int64(value), 10)
+	case int32:
+		value := intF.(int32)
+		data = strconv.FormatInt(int64(value), 10)
+	case int64:
+		value := intF.(int64)
+		data = strconv.FormatInt(value, 10)
+	case float32:
+		value := intF.(float32)
+		data = strconv.FormatFloat(float64(value), 'f', -1, 32)
+	case float64:
+		value := intF.(float64)
+		data = strconv.FormatFloat(value, 'f', -1, 64)
+	case string:
+		data = intF.(string)
 	}
 	return
 }
