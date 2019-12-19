@@ -1,7 +1,7 @@
 package main
 
 import (
-	"StudyGo/test/common"
+	"StudyGo/parser/common"
 	"fmt"
 	"go/parser"
 	"go/token"
@@ -37,7 +37,7 @@ func main()  {
 		pbMap := make(map[string][]string, 0)
 		fmt.Println("pkg name----", pkgName) //包名
 		for fileDir, file := range pkg.Files{
-			//fmt.Println("name----", fileDir) //文件路径
+			fmt.Println("name----", fileDir) //文件路径
 			fileName := strings.TrimSuffix(path.Base(fileDir), ".pb.go")//文件名
 			pbMap[fileName] = make([]string, 0)
 			for _, object := range file.Scope.Objects {

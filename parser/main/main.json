@@ -1,2534 +1,52 @@
 {
   "config": [
     {
-      "name": "LeagueData",
+      "name": "GamerGetBackpackC2S",
       "properties": [
         {
-          "field": "LeagueId",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Declaration",
-          "type": "string"
-        },
-        {
-          "field": "CreateTime",
-          "type": "int64"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        },
-        {
-          "field": "Chairman",
-          "type": "int32"
-        },
-        {
-          "field": "GamerList",
-          "type": "slice"
-        }
-      ],
-      "title": "LeagueData"
-    },
-    {
-      "name": "OnlineLeague",
-      "properties": [
-        {
-          "field": "Gid",
+          "field": "Id",
           "type": "int32"
         }
       ],
-      "title": "OnlineLeague"
+      "title": "GamerGetBackpackC2S"
     },
     {
-      "name": "S2C",
+      "name": "GamerDelFriendS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
-        },
-        {
-          "field": "Key",
-          "type": "string"
-        },
-        {
-          "field": "GamerLoginS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLoginGetDataS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "ServerTimeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyLoginOtherS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSubChatChannelS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeNameS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyExpLevelS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerBuyItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetBackpackS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSellItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUseItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCompoundItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSplitItemS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyItemChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerFriendChatS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerWorldChatS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerTestChatS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerClubRequestS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyNewChatS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewFriendReqS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelFriendS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyNewFriendReqS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerProcessFriendReqS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyNewFriendS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyDelFriendS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyMailS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyNewMailS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetMailS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelMailS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelHaveReadMailS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerOneKeyRcvMailRewardS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeMailStateS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewHeroS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUpgradeHeroS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChoseHeroS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPSyncS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyGamerMiniS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyPVPSyncS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyNewPVPResultS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPStateSyncS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyPVPStateSyncS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyIconChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyDiamonChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyEnergyChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyExpChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetRealTimeRankS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCheckPVPBattleS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUploadWXInfoS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "RoomListS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerAddRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyAddRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLeaveRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyLeaveRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyRoomStateChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyRoomInfoChangeS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeReadyInRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyChangeReadyInRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerMatchS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCancelMatchS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyMatchInfoS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetRewardS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUseIconS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyGashaponInfoS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerExtractGashaponS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetAllowanceS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyActivitiesS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GetActivityRewardS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GMS2C",
-          "type": "ptr"
         }
       ],
-      "title": "S2C"
+      "title": "GamerDelFriendS2C"
     },
     {
-      "name": "RedisNotifyNewWorldChat",
+      "name": "GamerChangeReadyInRoomS2C",
       "properties": [
         {
-          "field": "Server",
-          "type": "int32"
-        },
-        {
-          "field": "Data",
-          "type": "string"
-        }
-      ],
-      "title": "RedisNotifyNewWorldChat"
-    },
-    {
-      "name": "RedisNotifyNewWorldMail",
-      "properties": [
-        {
-          "field": "Server",
-          "type": "int32"
-        },
-        {
-          "field": "Data",
-          "type": "string"
-        }
-      ],
-      "title": "RedisNotifyNewWorldMail"
-    },
-    {
-      "name": "RedisNotifyDelGamerFriend",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyDelGamerFriend"
-    },
-    {
-      "name": "RedisNotifyAccessToken",
-      "properties": [
-        {
-          "field": "AccessToken",
-          "type": "string"
-        },
-        {
-          "field": "NextUpdateTime",
-          "type": "int64"
-        }
-      ],
-      "title": "RedisNotifyAccessToken"
-    },
-    {
-      "name": "RedisNotifyNewGamerMail",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Data",
-          "type": "string"
-        }
-      ],
-      "title": "RedisNotifyNewGamerMail"
-    },
-    {
-      "name": "RedisNotifyGamerLogin",
-      "properties": [
-        {
-          "field": "Psid",
-          "type": "int32"
-        },
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyGamerLogin"
-    },
-    {
-      "name": "RedisNotifyNewGamerFriend",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyNewGamerFriend"
-    },
-    {
-      "name": "RedisNotifyNewGamer",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyNewGamer"
-    },
-    {
-      "name": "RedisNotifyNewLogicArea",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyNewLogicArea"
-    },
-    {
-      "name": "RedisNotifyNewGamerFriendReq",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyNewGamerFriendReq"
-    },
-    {
-      "name": "RedisNotifyNewPVPResult",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyNewPVPResult"
-    },
-    {
-      "name": "RedisNotifyGamerLogout",
-      "properties": [
-        {
-          "field": "Psid",
-          "type": "int32"
-        },
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyGamerLogout"
-    },
-    {
-      "name": "RedisNotifyGamerUpdate",
-      "properties": [
-        {
-          "field": "Psid",
-          "type": "int32"
-        },
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "RedisNotifyGamerUpdate"
-    },
-    {
-      "name": "RedisNotifyNewGamerChat",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Data",
-          "type": "string"
-        }
-      ],
-      "title": "RedisNotifyNewGamerChat"
-    },
-    {
-      "name": "RedisNotify",
-      "properties": [
-        {
-          "field": "GamerLogin",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLogout",
-          "type": "ptr"
-        },
-        {
-          "field": "NewLogicArea",
-          "type": "ptr"
-        },
-        {
-          "field": "NewGamer",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUpdate",
-          "type": "ptr"
-        },
-        {
-          "field": "NewFriendReq",
-          "type": "ptr"
-        },
-        {
-          "field": "NewFriend",
-          "type": "ptr"
-        },
-        {
-          "field": "NewGamerChat",
-          "type": "ptr"
-        },
-        {
-          "field": "NewWorldChat",
-          "type": "ptr"
-        },
-        {
-          "field": "NewWorldMail",
-          "type": "ptr"
-        },
-        {
-          "field": "NewPVPResult",
-          "type": "ptr"
-        },
-        {
-          "field": "DelFriend",
-          "type": "ptr"
-        },
-        {
-          "field": "NewGamerMail",
-          "type": "ptr"
-        },
-        {
-          "field": "AccessToken",
-          "type": "ptr"
-        }
-      ],
-      "title": "RedisNotify"
-    },
-    {
-      "name": "Black",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Lsid",
-          "type": "int32"
-        },
-        {
-          "field": "StartTime",
-          "type": "int64"
-        },
-        {
-          "field": "Duration",
-          "type": "int32"
-        },
-        {
-          "field": "Info",
-          "type": "string"
-        },
-        {
-          "field": "Reason",
-          "type": "string"
-        }
-      ],
-      "title": "Black"
-    },
-    {
-      "name": "OrderNotify",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "string"
-        },
-        {
-          "field": "Channel",
-          "type": "int32"
-        },
-        {
-          "field": "Money",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Status",
-          "type": "int32"
-        }
-      ],
-      "title": "OrderNotify"
-    },
-    {
-      "name": "UserRoleInfo",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Server",
-          "type": "int32"
-        },
-        {
-          "field": "Ctime",
-          "type": "int64"
-        },
-        {
-          "field": "Uid",
-          "type": "string"
-        },
-        {
-          "field": "TypeId",
-          "type": "int32"
-        }
-      ],
-      "title": "UserRoleInfo"
-    },
-    {
-      "name": "Line",
-      "properties": [
-        {
-          "field": "Lsid",
-          "type": "int32"
-        },
-        {
-          "field": "On",
-          "type": "bool"
-        },
-        {
-          "field": "Min",
-          "type": "int32"
-        },
-        {
-          "field": "Max",
-          "type": "int32"
-        }
-      ],
-      "title": "Line"
-    },
-    {
-      "name": "LogicServerInfo",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Start",
-          "type": "int64"
-        },
-        {
-          "field": "End",
-          "type": "int64"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        },
-        {
-          "field": "CycleStart",
-          "type": "int64"
-        },
-        {
-          "field": "CycleEnd",
-          "type": "int64"
-        },
-        {
-          "field": "IsCycle",
-          "type": "bool"
-        }
-      ],
-      "title": "LogicServerInfo"
-    },
-    {
-      "name": "UserInfo",
-      "properties": [
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Passwd",
-          "type": "string"
-        },
-        {
-          "field": "Id",
-          "type": "string"
-        }
-      ],
-      "title": "UserInfo"
-    },
-    {
-      "name": "SuperAccount",
-      "properties": [
-        {
-          "field": "Uid",
-          "type": "string"
-        },
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "SuperAccount"
-    },
-    {
-      "name": "ServerCmd",
-      "properties": [
-        {
-          "field": "Path",
-          "type": "string"
-        },
-        {
-          "field": "GlobalPath",
-          "type": "string"
-        },
-        {
-          "field": "LogPath",
-          "type": "string"
-        },
-        {
-          "field": "LogSign",
-          "type": "string"
-        },
-        {
-          "field": "Daemon",
-          "type": "bool"
-        },
-        {
-          "field": "Lan",
-          "type": "bool"
-        }
-      ],
-      "title": "ServerCmd"
-    },
-    {
-      "name": "ServerInfo",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "CmdAddr",
-          "type": "string"
-        },
-        {
-          "field": "RpcAddr",
-          "type": "string"
-        },
-        {
-          "field": "ExtAddr",
-          "type": "string"
-        },
-        {
-          "field": "LastTick",
-          "type": "int64"
-        },
-        {
-          "field": "Type",
-          "type": "string"
-        },
-        {
-          "field": "Load",
-          "type": "int32"
-        },
-        {
-          "field": "Conf",
-          "type": "string"
-        },
-        {
-          "field": "OnlineCount",
-          "type": "int32"
-        },
-        {
-          "field": "Md5",
-          "type": "string"
-        },
-        {
-          "field": "PbVer",
-          "type": "string"
-        }
-      ],
-      "title": "ServerInfo"
-    },
-    {
-      "name": "ServerWarn",
-      "properties": [
-        {
-          "field": "BadRpc",
-          "type": "slice"
-        },
-        {
-          "field": "LastPanic",
-          "type": "int64"
-        },
-        {
-          "field": "PanicCount",
-          "type": "int32"
-        },
-        {
-          "field": "GoScale",
-          "type": "bool"
-        }
-      ],
-      "title": "ServerWarn"
-    },
-    {
-      "name": "PVPStateSync_Pillar",
-      "properties": [
-        {
-          "field": "X",
-          "type": "int32"
-        },
-        {
-          "field": "H",
-          "type": "int32"
-        },
-        {
-          "field": "W",
-          "type": "int32"
-        }
-      ],
-      "title": "PVPStateSync_Pillar"
-    },
-    {
-      "name": "ServerTime",
-      "properties": [
-        {
-          "field": "Timestamp",
-          "type": "int64"
-        },
-        {
-          "field": "Year",
-          "type": "int32"
-        },
-        {
-          "field": "Month",
-          "type": "int32"
-        },
-        {
-          "field": "Day",
-          "type": "int32"
-        },
-        {
-          "field": "Hour",
-          "type": "int32"
-        },
-        {
-          "field": "Minute",
-          "type": "int32"
-        },
-        {
-          "field": "Second",
-          "type": "int32"
-        },
-        {
-          "field": "Timezone",
-          "type": "int32"
-        }
-      ],
-      "title": "ServerTime"
-    },
-    {
-      "name": "WXInfo",
-      "properties": [
-        {
-          "field": "AvatarUrl",
-          "type": "string"
-        },
-        {
-          "field": "City",
-          "type": "string"
-        },
-        {
-          "field": "Gender",
-          "type": "int32"
-        },
-        {
-          "field": "OpenId",
-          "type": "string"
-        },
-        {
-          "field": "Language",
-          "type": "string"
-        },
-        {
-          "field": "NickName",
-          "type": "string"
-        },
-        {
-          "field": "Province",
-          "type": "string"
-        },
-        {
-          "field": "UnionId",
-          "type": "string"
-        },
-        {
-          "field": "Country",
-          "type": "string"
-        },
-        {
-          "field": "SessionId",
-          "type": "string"
-        },
-        {
-          "field": "Sign",
-          "type": "string"
-        }
-      ],
-      "title": "WXInfo"
-    },
-    {
-      "name": "GamerBlack",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerBlack"
-    },
-    {
-      "name": "GameItem",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "Count",
-          "type": "int32"
-        },
-        {
-          "field": "ObtainTime",
-          "type": "int64"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        }
-      ],
-      "title": "GameItem"
-    },
-    {
-      "name": "PVPInput",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Yaw",
-          "type": "int32"
-        },
-        {
-          "field": "Btn",
-          "type": "int32"
-        },
-        {
-          "field": "Pos",
-          "type": "int32"
-        },
-        {
-          "field": "Talk",
-          "type": "int32"
-        },
-        {
-          "field": "Frame",
-          "type": "int32"
-        },
-        {
-          "field": "X",
-          "type": "int32"
-        },
-        {
-          "field": "Y",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        }
-      ],
-      "title": "PVPInput"
-    },
-    {
-      "name": "PVPStateSync_GamerEnter",
-      "properties": [
-        {
-          "field": "Pos",
-          "type": "int32"
-        }
-      ],
-      "title": "PVPStateSync_GamerEnter"
-    },
-    {
-      "name": "PVPStateSync_S2C",
-      "properties": [
-        {
-          "field": "MatchInfo",
-          "type": "ptr"
-        },
-        {
-          "field": "Result",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerInfo",
-          "type": "slice"
-        },
-        {
-          "field": "GamerEnter",
-          "type": "slice"
-        },
-        {
-          "field": "Jump",
-          "type": "ptr"
-        }
-      ],
-      "title": "PVPStateSync_S2C"
-    },
-    {
-      "name": "PVPResult",
-      "properties": [
-        {
-          "field": "Kills",
-          "type": "slice"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Gone",
-          "type": "slice"
-        },
-        {
-          "field": "Version",
-          "type": "int32"
-        },
-        {
-          "field": "SResult",
-          "type": "ptr"
-        },
-        {
-          "field": "MatchInfo",
-          "type": "ptr"
-        },
-        {
-          "field": "Frames",
-          "type": "slice"
-        },
-        {
-          "field": "Md5",
-          "type": "string"
-        }
-      ],
-      "title": "PVPResult"
-    },
-    {
-      "name": "PVPStateSync",
-      "properties": [
-        {
-          "field": "C2S",
-          "type": "ptr"
-        },
-        {
-          "field": "S2C",
-          "type": "ptr"
-        }
-      ],
-      "title": "PVPStateSync"
-    },
-    {
-      "name": "PVPStateSync_GamerInfo",
-      "properties": [
-        {
-          "field": "Pos",
-          "type": "int32"
-        },
-        {
-          "field": "Score",
-          "type": "int32"
-        },
-        {
-          "field": "Cp",
-          "type": "ptr"
-        }
-      ],
-      "title": "PVPStateSync_GamerInfo"
-    },
-    {
-      "name": "PVPStateSync_Jump",
-      "properties": [
-        {
-          "field": "Pos",
-          "type": "int32"
-        },
-        {
-          "field": "Vx",
-          "type": "int32"
-        },
-        {
-          "field": "Vy",
-          "type": "int32"
-        }
-      ],
-      "title": "PVPStateSync_Jump"
-    },
-    {
-      "name": "CountActivity",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "CurrentDay",
-          "type": "int32"
-        },
-        {
-          "field": "AlreadyGetDay",
-          "type": "int32"
-        }
-      ],
-      "title": "CountActivity"
-    },
-    {
-      "name": "GamerFriend",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "GamerInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerFriend"
-    },
-    {
-      "name": "GamerHero",
-      "properties": [
-        {
-          "field": "Lid",
-          "type": "int32"
-        },
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        },
-        {
-          "field": "Chose",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerHero"
-    },
-    {
-      "name": "PVPFrames",
-      "properties": [
-        {
-          "field": "Frames",
-          "type": "slice"
-        }
-      ],
-      "title": "PVPFrames"
-    },
-    {
-      "name": "PVPStateSync_MatchInfo",
-      "properties": [
-        {
-          "field": "Time",
-          "type": "int32"
-        },
-        {
-          "field": "LeftScore",
-          "type": "int32"
-        },
-        {
-          "field": "RightScore",
-          "type": "int32"
-        },
-        {
-          "field": "Pillars",
-          "type": "slice"
-        },
-        {
-          "field": "Items",
-          "type": "slice"
-        }
-      ],
-      "title": "PVPStateSync_MatchInfo"
-    },
-    {
-      "name": "GamerFriendRequest",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "GamerInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerFriendRequest"
-    },
-    {
-      "name": "RoomInfo",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "uint32"
-        },
-        {
-          "field": "OwnerId",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        },
-        {
-          "field": "Members",
-          "type": "slice"
-        }
-      ],
-      "title": "RoomInfo"
-    },
-    {
-      "name": "PVPStateSync_CheckPoint",
-      "properties": [
-        {
-          "field": "RunTime",
-          "type": "int32"
-        },
-        {
-          "field": "LastX",
-          "type": "int32"
-        },
-        {
-          "field": "LastY",
-          "type": "int32"
-        },
-        {
-          "field": "LastIndex",
-          "type": "int32"
-        },
-        {
-          "field": "NextIndex",
-          "type": "int32"
-        },
-        {
-          "field": "BeginTime",
-          "type": "int32"
-        },
-        {
-          "field": "ClientTime",
-          "type": "int32"
-        },
-        {
-          "field": "NextX",
-          "type": "int32"
-        },
-        {
-          "field": "NextY",
-          "type": "int32"
-        },
-        {
-          "field": "MinY",
-          "type": "int32"
-        }
-      ],
-      "title": "PVPStateSync_CheckPoint"
-    },
-    {
-      "name": "RankLength",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Length",
-          "type": "int32"
-        },
-        {
-          "field": "Rank",
-          "type": "int32"
-        },
-        {
-          "field": "Mini",
-          "type": "ptr"
-        }
-      ],
-      "title": "RankLength"
-    },
-    {
-      "name": "Gashapon",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ExtractNum",
-          "type": "int32"
-        },
-        {
-          "field": "FreeNum",
-          "type": "int32"
-        },
-        {
-          "field": "NextFreeTime",
-          "type": "int64"
-        },
-        {
-          "field": "StartTime",
-          "type": "int64"
-        },
-        {
-          "field": "EndTime",
-          "type": "int64"
-        }
-      ],
-      "title": "Gashapon"
-    },
-    {
-      "name": "PVPStateSync_Result",
-      "properties": [
-        {
-          "field": "Mvp",
-          "type": "int32"
-        },
-        {
-          "field": "Timeout",
-          "type": "bool"
-        },
-        {
-          "field": "Scores",
-          "type": "slice"
-        },
-        {
-          "field": "Icons",
-          "type": "slice"
-        }
-      ],
-      "title": "PVPStateSync_Result"
-    },
-    {
-      "name": "GamerMini",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        },
-        {
-          "field": "Lsid",
+          "field": "Error",
           "type": "int32"
         },
         {
           "field": "State",
           "type": "int32"
-        },
-        {
-          "field": "Avatar",
-          "type": "string"
-        },
-        {
-          "field": "Channel",
-          "type": "string"
         }
       ],
-      "title": "GamerMini"
+      "title": "GamerChangeReadyInRoomS2C"
     },
     {
-      "name": "GamerMatch",
-      "properties": [
-        {
-          "field": "Mini",
-          "type": "ptr"
-        },
-        {
-          "field": "Ai",
-          "type": "bool"
-        },
-        {
-          "field": "Pair",
-          "type": "int32"
-        },
-        {
-          "field": "Hero",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerMatch"
-    },
-    {
-      "name": "PrevC2S",
-      "properties": [
-        {
-          "field": "Key",
-          "type": "string"
-        }
-      ],
-      "title": "PrevC2S"
-    },
-    {
-      "name": "Mail",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "string"
-        },
-        {
-          "field": "MailType",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Theme",
-          "type": "string"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        },
-        {
-          "field": "Attachments",
-          "type": "slice"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        },
-        {
-          "field": "ServerId",
-          "type": "int32"
-        },
-        {
-          "field": "SenderId",
-          "type": "int32"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        },
-        {
-          "field": "EndTime",
-          "type": "int64"
-        },
-        {
-          "field": "IsDel",
-          "type": "int32"
-        },
-        {
-          "field": "CfgId",
-          "type": "int32"
-        },
-        {
-          "field": "Save",
-          "type": "bool"
-        },
-        {
-          "field": "GamerInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "Mail"
-    },
-    {
-      "name": "BagItem",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Count",
-          "type": "int32"
-        }
-      ],
-      "title": "BagItem"
-    },
-    {
-      "name": "NumberRecord",
-      "properties": [
-        {
-          "field": "Elo",
-          "type": "int32"
-        },
-        {
-          "field": "NormWin",
-          "type": "int32"
-        },
-        {
-          "field": "TotalSignIn",
-          "type": "int32"
-        },
-        {
-          "field": "WeekTotalSign",
-          "type": "int32"
-        },
-        {
-          "field": "WeekGoldGet",
-          "type": "int32"
-        },
-        {
-          "field": "WeekExpGet",
-          "type": "int32"
-        }
-      ],
-      "title": "NumberRecord"
-    },
-    {
-      "name": "ChatData",
-      "properties": [
-        {
-          "field": "From",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        },
-        {
-          "field": "Channel",
-          "type": "int32"
-        },
-        {
-          "field": "GamerInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "ChatData"
-    },
-    {
-      "name": "TimeRecord",
-      "properties": [
-        {
-          "field": "LastSign",
-          "type": "int64"
-        },
-        {
-          "field": "LastGetPVPResult",
-          "type": "int64"
-        },
-        {
-          "field": "LastWeekRec",
-          "type": "int64"
-        },
-        {
-          "field": "TotalTime",
-          "type": "int32"
-        }
-      ],
-      "title": "TimeRecord"
-    },
-    {
-      "name": "GamerMain",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Uid",
-          "type": "string"
-        },
-        {
-          "field": "Lsid",
-          "type": "int32"
-        },
-        {
-          "field": "Psid",
-          "type": "int32"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        },
-        {
-          "field": "Session",
-          "type": "string"
-        },
-        {
-          "field": "Create",
-          "type": "int64"
-        },
-        {
-          "field": "LastLogin",
-          "type": "int64"
-        },
-        {
-          "field": "LastLogout",
-          "type": "int64"
-        },
-        {
-          "field": "TypeId",
-          "type": "int32"
-        },
-        {
-          "field": "Icon",
-          "type": "int32"
-        },
-        {
-          "field": "Diamond",
-          "type": "int32"
-        },
-        {
-          "field": "Exp",
-          "type": "int32"
-        },
-        {
-          "field": "PvpSession",
-          "type": "string"
-        },
-        {
-          "field": "Avatar",
-          "type": "string"
-        },
-        {
-          "field": "Energy",
-          "type": "int32"
-        },
-        {
-          "field": "IsNewbie",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerMain"
-    },
-    {
-      "name": "MatchInfo",
-      "properties": [
-        {
-          "field": "Session",
-          "type": "string"
-        },
-        {
-          "field": "Time",
-          "type": "int64"
-        },
-        {
-          "field": "Addr",
-          "type": "string"
-        },
-        {
-          "field": "FrameDelta",
-          "type": "int32"
-        },
-        {
-          "field": "MinFrameDelta",
-          "type": "int32"
-        },
-        {
-          "field": "MatchTime",
-          "type": "int32"
-        },
-        {
-          "field": "InputDelta",
-          "type": "int32"
-        },
-        {
-          "field": "PvpType",
-          "type": "int32"
-        },
-        {
-          "field": "ThreadRecv",
-          "type": "bool"
-        },
-        {
-          "field": "Gamers",
-          "type": "slice"
-        }
-      ],
-      "title": "MatchInfo"
-    },
-    {
-      "name": "PVPStateSync_Item",
-      "properties": [
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "X",
-          "type": "int32"
-        },
-        {
-          "field": "H",
-          "type": "int32"
-        },
-        {
-          "field": "Index",
-          "type": "int32"
-        }
-      ],
-      "title": "PVPStateSync_Item"
-    },
-    {
-      "name": "PVPStateSync_C2S",
-      "properties": [
-        {
-          "field": "Jump",
-          "type": "ptr"
-        },
-        {
-          "field": "Enter",
-          "type": "ptr"
-        }
-      ],
-      "title": "PVPStateSync_C2S"
-    },
-    {
-      "name": "PVPFrame",
-      "properties": [
-        {
-          "field": "Delta",
-          "type": "int32"
-        },
-        {
-          "field": "Frame",
-          "type": "int32"
-        },
-        {
-          "field": "End",
-          "type": "bool"
-        },
-        {
-          "field": "Inputs",
-          "type": "slice"
-        }
-      ],
-      "title": "PVPFrame"
-    },
-    {
-      "name": "RoomMemInfo",
-      "properties": [
-        {
-          "field": "MiniInfo",
-          "type": "ptr"
-        },
-        {
-          "field": "Hero",
-          "type": "int32"
-        }
-      ],
-      "title": "RoomMemInfo"
-    },
-    {
-      "name": "C2S",
-      "properties": [
-        {
-          "field": "Key",
-          "type": "string"
-        },
-        {
-          "field": "GamerLoginC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLoginGetDataC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "ServerTimeC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSubChatChannelC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeNameC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerBuyItemC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetBackpackC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSellItemC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUseItemC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCompoundItemC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerSplitItemC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerFriendChatC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerWorldChatC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerTestChatC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerClubRequestC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewFriendReqC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelFriendC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerProcessFriendReqC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetMailC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelMailC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerDelHaveReadMailC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerOneKeyRcvMailRewardC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeMailStateC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewHeroC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUpgradeHeroC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChoseHeroC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPSyncC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPStateSyncC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetRealTimeRankC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCheckPVPBattleC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUploadWXInfoC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "RoomListC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerAddRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLeaveRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerChangeReadyInRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerMatchC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerCancelMatchC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetRewardC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerUseIconC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerExtractGashaponC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerGetAllowanceC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GetActivityRewardC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GMC2S",
-          "type": "ptr"
-        }
-      ],
-      "title": "C2S"
-    },
-    {
-      "name": "ServerHello",
-      "properties": [
-        {
-          "field": "Info",
-          "type": "ptr"
-        },
-        {
-          "field": "Mss",
-          "type": "slice"
-        }
-      ],
-      "title": "ServerHello"
-    },
-    {
-      "name": "GamerNotifyList",
-      "properties": [
-        {
-          "field": "Data",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyList"
-    },
-    {
-      "name": "GamerExitPVP",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerExitPVP"
-    },
-    {
-      "name": "RPC",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ServerHello",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotify",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNotifyList",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerExitPVP",
-          "type": "ptr"
-        },
-        {
-          "field": "TestChatC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "TestChatS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "MatchC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "MatchS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "CheckPVPBattleC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "CheckPVPBattleS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerNewRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerAddRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerAddRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLeaveRoomC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerLeaveRoomS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPStateSyncC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerPVPStateSyncS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "CancelMatchC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "CancelMatchS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "RoomListC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "RoomListS2C",
-          "type": "ptr"
-        },
-        {
-          "field": "ChangeReadyC2S",
-          "type": "ptr"
-        },
-        {
-          "field": "ChangeReadyS2C",
-          "type": "ptr"
-        }
-      ],
-      "title": "RPC"
-    },
-    {
-      "name": "GamerNotify",
-      "properties": [
-        {
-          "field": "Ids",
-          "type": "slice"
-        },
-        {
-          "field": "S2C",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotify"
-    },
-    {
-      "name": "InnerGamerLogout",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "LoginOhter",
-          "type": "bool"
-        }
-      ],
-      "title": "InnerGamerLogout"
-    },
-    {
-      "name": "InnerNewGamerFriend",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerNewGamerFriend"
-    },
-    {
-      "name": "InnerNewPVPResult",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerNewPVPResult"
-    },
-    {
-      "name": "InnerMatchOk",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "MatchInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "InnerMatchOk"
-    },
-    {
-      "name": "InnerGamerExitPVP",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerGamerExitPVP"
-    },
-    {
-      "name": "Inner",
-      "properties": [
-        {
-          "field": "GamerLogout",
-          "type": "ptr"
-        },
-        {
-          "field": "NewFriendReq",
-          "type": "ptr"
-        },
-        {
-          "field": "NewFriend",
-          "type": "ptr"
-        },
-        {
-          "field": "NewChat",
-          "type": "ptr"
-        },
-        {
-          "field": "NewPVPResult",
-          "type": "ptr"
-        },
-        {
-          "field": "MatchOk",
-          "type": "ptr"
-        },
-        {
-          "field": "DelFriend",
-          "type": "ptr"
-        },
-        {
-          "field": "GetModelData",
-          "type": "ptr"
-        },
-        {
-          "field": "NewGamerMail",
-          "type": "ptr"
-        },
-        {
-          "field": "GamerExitPVP",
-          "type": "ptr"
-        }
-      ],
-      "title": "Inner"
-    },
-    {
-      "name": "InnerNewGamerChat",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Chat",
-          "type": "ptr"
-        }
-      ],
-      "title": "InnerNewGamerChat"
-    },
-    {
-      "name": "InnerNewGamerMail",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Mail",
-          "type": "ptr"
-        }
-      ],
-      "title": "InnerNewGamerMail"
-    },
-    {
-      "name": "InnerNewGamerFriendReq",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerNewGamerFriendReq"
-    },
-    {
-      "name": "InnerDelGamerFriend",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerDelGamerFriend"
-    },
-    {
-      "name": "InnerGetModelData",
-      "properties": [
-        {
-          "field": "Gid",
-          "type": "int32"
-        },
-        {
-          "field": "Typ",
-          "type": "int32"
-        }
-      ],
-      "title": "InnerGetModelData"
-    },
-    {
-      "name": "GamerNewRoomS2C",
+      "name": "GamerNotifyNewFriendReqS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         },
         {
-          "field": "Room",
+          "field": "Request",
           "type": "ptr"
         }
       ],
-      "title": "GamerNewRoomS2C"
-    },
-    {
-      "name": "GamerNotifyAddRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Member",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyAddRoomS2C"
-    },
-    {
-      "name": "GamerNotifyActivitiesS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "CountActivity",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyActivitiesS2C"
-    },
-    {
-      "name": "GamerBuyItemC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Item",
-          "type": "int32"
-        },
-        {
-          "field": "Count",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerBuyItemC2S"
-    },
-    {
-      "name": "GamerOneKeyRcvMailRewardS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerOneKeyRcvMailRewardS2C"
-    },
-    {
-      "name": "ServerTimeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "ptr"
-        }
-      ],
-      "title": "ServerTimeS2C"
-    },
-    {
-      "name": "GamerSplitItemC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ItemId",
-          "type": "int32"
-        },
-        {
-          "field": "Num",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerSplitItemC2S"
-    },
-    {
-      "name": "GamerExtractGashaponC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "GashaponId",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerExtractGashaponC2S"
-    },
-    {
-      "name": "GamerGetRewardC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerGetRewardC2S"
+      "title": "GamerNotifyNewFriendReqS2C"
     },
     {
       "name": "GamerPVPSyncC2S",
@@ -2585,134 +103,6 @@
       "title": "GamerPVPSyncC2S"
     },
     {
-      "name": "GamerNotifyExpLevelS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Exp",
-          "type": "int32"
-        },
-        {
-          "field": "Level",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyExpLevelS2C"
-    },
-    {
-      "name": "GamerPVPSyncS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerPVPSyncS2C"
-    },
-    {
-      "name": "GamerNotifyLoginOtherS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyLoginOtherS2C"
-    },
-    {
-      "name": "GamerNotifyNewPVPResultS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Icon",
-          "type": "int32"
-        },
-        {
-          "field": "Result",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyNewPVPResultS2C"
-    },
-    {
-      "name": "GamerNotifyPVPStateSyncS2C",
-      "properties": [
-        {
-          "field": "StateSync",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyPVPStateSyncS2C"
-    },
-    {
-      "name": "GamerNewFriendReqS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNewFriendReqS2C"
-    },
-    {
-      "name": "GamerNotifyDelFriendS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyDelFriendS2C"
-    },
-    {
-      "name": "GamerNotifyMatchInfoS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "MatchInfo",
-          "type": "ptr"
-        },
-        {
-          "field": "Reconn",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerNotifyMatchInfoS2C"
-    },
-    {
-      "name": "GamerUseIconS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerUseIconS2C"
-    },
-    {
-      "name": "GamerSubChatChannelS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerSubChatChannelS2C"
-    },
-    {
       "name": "GetActivityRewardS2C",
       "properties": [
         {
@@ -2725,1034 +115,6 @@
         }
       ],
       "title": "GetActivityRewardS2C"
-    },
-    {
-      "name": "GamerGetRewardS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerGetRewardS2C"
-    },
-    {
-      "name": "GamerLoginGetDataC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerLoginGetDataC2S"
-    },
-    {
-      "name": "GamerChangeNameC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "NewName",
-          "type": "string"
-        }
-      ],
-      "title": "GamerChangeNameC2S"
-    },
-    {
-      "name": "GamerClubRequestS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Ok",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerClubRequestS2C"
-    },
-    {
-      "name": "GamerNewHeroS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Hero",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNewHeroS2C"
-    },
-    {
-      "name": "GamerChangeReadyInRoomC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "RoomId",
-          "type": "uint32"
-        }
-      ],
-      "title": "GamerChangeReadyInRoomC2S"
-    },
-    {
-      "name": "GamerWorldChatC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Server",
-          "type": "int32"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        }
-      ],
-      "title": "GamerWorldChatC2S"
-    },
-    {
-      "name": "GamerNotifyGashaponInfoS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Infos",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyGashaponInfoS2C"
-    },
-    {
-      "name": "GamerUpgradeHeroC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Lid",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerUpgradeHeroC2S"
-    },
-    {
-      "name": "GamerPVPStateSyncC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Session",
-          "type": "string"
-        },
-        {
-          "field": "Result",
-          "type": "ptr"
-        },
-        {
-          "field": "StateSync",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerPVPStateSyncC2S"
-    },
-    {
-      "name": "GamerNewFriendReqC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        }
-      ],
-      "title": "GamerNewFriendReqC2S"
-    },
-    {
-      "name": "GamerLeaveRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerLeaveRoomS2C"
-    },
-    {
-      "name": "GamerNotifyLeaveRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "MemberId",
-          "type": "int32"
-        },
-        {
-          "field": "NewOwnerId",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyLeaveRoomS2C"
-    },
-    {
-      "name": "GamerDelHaveReadMailS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerDelHaveReadMailS2C"
-    },
-    {
-      "name": "GamerNotifyItemS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Item",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyItemS2C"
-    },
-    {
-      "name": "GamerCompoundItemC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ItemId",
-          "type": "int32"
-        },
-        {
-          "field": "Num",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerCompoundItemC2S"
-    },
-    {
-      "name": "GamerNotifyNewMailS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Mails",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyNewMailS2C"
-    },
-    {
-      "name": "GamerGetAllowanceC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerGetAllowanceC2S"
-    },
-    {
-      "name": "GamerSubChatChannelC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Channel",
-          "type": "int32"
-        },
-        {
-          "field": "Open",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerSubChatChannelC2S"
-    },
-    {
-      "name": "GamerBuyItemS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerBuyItemS2C"
-    },
-    {
-      "name": "GamerNotifyEnergyChangeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Energy",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyEnergyChangeS2C"
-    },
-    {
-      "name": "GamerChangeReadyInRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerChangeReadyInRoomS2C"
-    },
-    {
-      "name": "GamerNotifyRoomInfoChangeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Room",
-          "type": "ptr"
-        },
-        {
-          "field": "Cancel",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerNotifyRoomInfoChangeS2C"
-    },
-    {
-      "name": "RoomListS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "RoomList",
-          "type": "slice"
-        }
-      ],
-      "title": "RoomListS2C"
-    },
-    {
-      "name": "GetActivityRewardC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ActivityId",
-          "type": "int32"
-        }
-      ],
-      "title": "GetActivityRewardC2S"
-    },
-    {
-      "name": "GamerLoginC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Session",
-          "type": "string"
-        },
-        {
-          "field": "Addr",
-          "type": "string"
-        }
-      ],
-      "title": "GamerLoginC2S"
-    },
-    {
-      "name": "GamerDelFriendC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerDelFriendC2S"
-    },
-    {
-      "name": "GamerCheckPVPBattleC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Session",
-          "type": "string"
-        }
-      ],
-      "title": "GamerCheckPVPBattleC2S"
-    },
-    {
-      "name": "GamerNotifyChangeReadyInRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "MemberId",
-          "type": "int32"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyChangeReadyInRoomS2C"
-    },
-    {
-      "name": "GamerCancelMatchC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerCancelMatchC2S"
-    },
-    {
-      "name": "GamerCompoundItemS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerCompoundItemS2C"
-    },
-    {
-      "name": "GamerGetMailS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerGetMailS2C"
-    },
-    {
-      "name": "GamerOneKeyRcvMailRewardC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerOneKeyRcvMailRewardC2S"
-    },
-    {
-      "name": "ServerTimeC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "ServerTimeC2S"
-    },
-    {
-      "name": "GamerNotifyRoomStateChangeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyRoomStateChangeS2C"
-    },
-    {
-      "name": "GamerNotifyIconChangeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Icon",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNotifyIconChangeS2C"
-    },
-    {
-      "name": "GamerProcessFriendReqC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Oid",
-          "type": "int32"
-        },
-        {
-          "field": "Result",
-          "type": "bool"
-        }
-      ],
-      "title": "GamerProcessFriendReqC2S"
-    },
-    {
-      "name": "GamerNotifyMailS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "LeftMailNum",
-          "type": "int32"
-        },
-        {
-          "field": "Mails",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyMailS2C"
-    },
-    {
-      "name": "GamerDelMailS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerDelMailS2C"
-    },
-    {
-      "name": "GamerLoginS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Main",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerLoginS2C"
-    },
-    {
-      "name": "GamerTestChatS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerTestChatS2C"
-    },
-    {
-      "name": "GamerNotifyNewChatS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Chats",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyNewChatS2C"
-    },
-    {
-      "name": "GamerNotifyNewFriendS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Friend",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyNewFriendS2C"
-    },
-    {
-      "name": "GamerNewHeroC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "HeroId",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerNewHeroC2S"
-    },
-    {
-      "name": "GamerMatchS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerMatchS2C"
-    },
-    {
-      "name": "GamerNewRoomC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "Hero",
-          "type": "int32"
-        },
-        {
-          "field": "Name",
-          "type": "string"
-        }
-      ],
-      "title": "GamerNewRoomC2S"
-    },
-    {
-      "name": "GamerChangeMailStateC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "MailId",
-          "type": "string"
-        },
-        {
-          "field": "State",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerChangeMailStateC2S"
-    },
-    {
-      "name": "RoomListC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "RoomListC2S"
-    },
-    {
-      "name": "GamerLoginGetDataS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Time",
-          "type": "ptr"
-        },
-        {
-          "field": "FriendReqs",
-          "type": "slice"
-        },
-        {
-          "field": "Friends",
-          "type": "slice"
-        },
-        {
-          "field": "Heros",
-          "type": "slice"
-        },
-        {
-          "field": "Items",
-          "type": "slice"
-        },
-        {
-          "field": "LengthRank",
-          "type": "int32"
-        },
-        {
-          "field": "Length",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerLoginGetDataS2C"
-    },
-    {
-      "name": "GamerSellItemC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ItemId",
-          "type": "int32"
-        },
-        {
-          "field": "Num",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerSellItemC2S"
-    },
-    {
-      "name": "GamerUseItemC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ItemId",
-          "type": "int32"
-        },
-        {
-          "field": "Num",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerUseItemC2S"
-    },
-    {
-      "name": "GamerFriendChatC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ToId",
-          "type": "int32"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        }
-      ],
-      "title": "GamerFriendChatC2S"
-    },
-    {
-      "name": "GamerCheckPVPBattleS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "MatchInfo",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerCheckPVPBattleS2C"
-    },
-    {
-      "name": "GamerAddRoomS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Room",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerAddRoomS2C"
-    },
-    {
-      "name": "GamerLeaveRoomC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "RoomId",
-          "type": "uint32"
-        }
-      ],
-      "title": "GamerLeaveRoomC2S"
-    },
-    {
-      "name": "GamerDelMailC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "MailId",
-          "type": "string"
-        }
-      ],
-      "title": "GamerDelMailC2S"
-    },
-    {
-      "name": "GamerNotifyGamerMiniS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Mini",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyGamerMiniS2C"
-    },
-    {
-      "name": "GamerChoseHeroC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Lid",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerChoseHeroC2S"
-    },
-    {
-      "name": "GamerGetAllowanceS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "Items",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerGetAllowanceS2C"
-    },
-    {
-      "name": "GamerAddRoomC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "RoomId",
-          "type": "uint32"
-        },
-        {
-          "field": "Hero",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerAddRoomC2S"
-    },
-    {
-      "name": "GamerGetMailC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerGetMailC2S"
-    },
-    {
-      "name": "GMC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Gm",
-          "type": "string"
-        }
-      ],
-      "title": "GMC2S"
-    },
-    {
-      "name": "GamerNotifyItemChangeS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "ItemsChange",
-          "type": "slice"
-        }
-      ],
-      "title": "GamerNotifyItemChangeS2C"
-    },
-    {
-      "name": "GamerDelFriendS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerDelFriendS2C"
-    },
-    {
-      "name": "GamerMatchC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "Type",
-          "type": "int32"
-        },
-        {
-          "field": "Hero",
-          "type": "int32"
-        },
-        {
-          "field": "RoomId",
-          "type": "uint32"
-        }
-      ],
-      "title": "GamerMatchC2S"
-    },
-    {
-      "name": "GMS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GMS2C"
-    },
-    {
-      "name": "GamerChangeNameS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerChangeNameS2C"
-    },
-    {
-      "name": "GamerPVPStateSyncS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerPVPStateSyncS2C"
-    },
-    {
-      "name": "GamerTestChatC2S",
-      "properties": [
-        {
-          "field": "Id",
-          "type": "int32"
-        },
-        {
-          "field": "ToId",
-          "type": "int32"
-        },
-        {
-          "field": "Msg",
-          "type": "string"
-        }
-      ],
-      "title": "GamerTestChatC2S"
-    },
-    {
-      "name": "GamerNotifyNewFriendReqS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        },
-        {
-          "field": "Request",
-          "type": "ptr"
-        }
-      ],
-      "title": "GamerNotifyNewFriendReqS2C"
     },
     {
       "name": "GamerUseItemS2C",
@@ -3783,42 +145,64 @@
       "title": "GamerProcessFriendReqS2C"
     },
     {
-      "name": "GamerUpgradeHeroS2C",
+      "name": "GamerCheckPVPBattleC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Session",
+          "type": "string"
+        }
+      ],
+      "title": "GamerCheckPVPBattleC2S"
+    },
+    {
+      "name": "GamerNotifyNewFriendS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         },
         {
-          "field": "Hero",
+          "field": "Friend",
           "type": "ptr"
         }
       ],
-      "title": "GamerUpgradeHeroS2C"
+      "title": "GamerNotifyNewFriendS2C"
     },
     {
-      "name": "GamerGetRealTimeRankS2C",
+      "name": "GamerNotifyActivitiesS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         },
         {
-          "field": "Ranks",
-          "type": "slice"
+          "field": "CountActivity",
+          "type": "ptr"
         }
       ],
-      "title": "GamerGetRealTimeRankS2C"
+      "title": "GamerNotifyActivitiesS2C"
     },
     {
-      "name": "GamerSellItemS2C",
+      "name": "GamerSplitItemC2S",
       "properties": [
         {
-          "field": "Error",
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ItemId",
+          "type": "int32"
+        },
+        {
+          "field": "Num",
           "type": "int32"
         }
       ],
-      "title": "GamerSellItemS2C"
+      "title": "GamerSplitItemC2S"
     },
     {
       "name": "GamerDelHaveReadMailC2S",
@@ -3829,6 +213,80 @@
         }
       ],
       "title": "GamerDelHaveReadMailC2S"
+    },
+    {
+      "name": "GamerNotifyLeaveRoomS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "MemberId",
+          "type": "int32"
+        },
+        {
+          "field": "NewOwnerId",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyLeaveRoomS2C"
+    },
+    {
+      "name": "GamerNewFriendReqS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNewFriendReqS2C"
+    },
+    {
+      "name": "GamerNotifyDiamonChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Diamon",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyDiamonChangeS2C"
+    },
+    {
+      "name": "GamerExtractGashaponS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "GashaponId",
+          "type": "int32"
+        },
+        {
+          "field": "Items",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerExtractGashaponS2C"
+    },
+    {
+      "name": "GamerNotifyNewChatS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Chats",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerNotifyNewChatS2C"
     },
     {
       "name": "GamerNotifyPVPSyncS2C",
@@ -3873,34 +331,286 @@
       "title": "GamerNotifyPVPSyncS2C"
     },
     {
-      "name": "GamerSplitItemS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerSplitItemS2C"
-    },
-    {
-      "name": "GamerGetBackpackC2S",
+      "name": "GamerGetRealTimeRankC2S",
       "properties": [
         {
           "field": "Id",
           "type": "int32"
         }
       ],
-      "title": "GamerGetBackpackC2S"
+      "title": "GamerGetRealTimeRankC2S"
     },
     {
-      "name": "GamerChangeMailStateS2C",
+      "name": "GamerAddRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        },
+        {
+          "field": "Hero",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerAddRoomC2S"
+    },
+    {
+      "name": "GamerDelMailC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "MailId",
+          "type": "string"
+        }
+      ],
+      "title": "GamerDelMailC2S"
+    },
+    {
+      "name": "GamerNotifyChangeReadyInRoomS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "MemberId",
+          "type": "int32"
+        },
+        {
+          "field": "State",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyChangeReadyInRoomS2C"
+    },
+    {
+      "name": "GamerNotifyRoomInfoChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Room",
+          "type": "ptr"
+        },
+        {
+          "field": "Cancel",
+          "type": "bool"
+        }
+      ],
+      "title": "GamerNotifyRoomInfoChangeS2C"
+    },
+    {
+      "name": "GamerWorldChatC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Server",
+          "type": "int32"
+        },
+        {
+          "field": "Msg",
+          "type": "string"
+        }
+      ],
+      "title": "GamerWorldChatC2S"
+    },
+    {
+      "name": "GamerTestChatS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerTestChatS2C"
+    },
+    {
+      "name": "GamerNotifyDelFriendS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Oid",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyDelFriendS2C"
+    },
+    {
+      "name": "GamerNotifyGamerMiniS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Mini",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerNotifyGamerMiniS2C"
+    },
+    {
+      "name": "GamerUploadWXInfoC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "WxInfo",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerUploadWXInfoC2S"
+    },
+    {
+      "name": "GamerNewHeroC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "HeroId",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNewHeroC2S"
+    },
+    {
+      "name": "GamerNotifyNewPVPResultS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Icon",
+          "type": "int32"
+        },
+        {
+          "field": "Result",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerNotifyNewPVPResultS2C"
+    },
+    {
+      "name": "GamerNotifyAddRoomS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Member",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerNotifyAddRoomS2C"
+    },
+    {
+      "name": "GamerDelMailS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         }
       ],
-      "title": "GamerChangeMailStateS2C"
+      "title": "GamerDelMailS2C"
+    },
+    {
+      "name": "GamerOneKeyRcvMailRewardC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerOneKeyRcvMailRewardC2S"
+    },
+    {
+      "name": "GamerChangeMailStateC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "MailId",
+          "type": "string"
+        },
+        {
+          "field": "State",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerChangeMailStateC2S"
+    },
+    {
+      "name": "GamerNewHeroS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Hero",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerNewHeroS2C"
+    },
+    {
+      "name": "GamerSellItemC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ItemId",
+          "type": "int32"
+        },
+        {
+          "field": "Num",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerSellItemC2S"
+    },
+    {
+      "name": "GamerCheckPVPBattleS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "MatchInfo",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerCheckPVPBattleS2C"
     },
     {
       "name": "GamerClubRequestC2S",
@@ -3921,14 +631,804 @@
       "title": "GamerClubRequestC2S"
     },
     {
-      "name": "GamerUploadWXInfoS2C",
+      "name": "GamerPVPStateSyncS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         }
       ],
-      "title": "GamerUploadWXInfoS2C"
+      "title": "GamerPVPStateSyncS2C"
+    },
+    {
+      "name": "GamerLoginC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Session",
+          "type": "string"
+        },
+        {
+          "field": "Addr",
+          "type": "string"
+        }
+      ],
+      "title": "GamerLoginC2S"
+    },
+    {
+      "name": "GamerFriendChatS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerFriendChatS2C"
+    },
+    {
+      "name": "GamerAddRoomS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Room",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerAddRoomS2C"
+    },
+    {
+      "name": "GamerLeaveRoomS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerLeaveRoomS2C"
+    },
+    {
+      "name": "GamerGetBackpackS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Items",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerGetBackpackS2C"
+    },
+    {
+      "name": "GamerNotifyExpChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Exp",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyExpChangeS2C"
+    },
+    {
+      "name": "GamerSubChatChannelS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerSubChatChannelS2C"
+    },
+    {
+      "name": "RoomListC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "RoomListC2S"
+    },
+    {
+      "name": "ServerTimeC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "ServerTimeC2S"
+    },
+    {
+      "name": "GamerUseItemC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ItemId",
+          "type": "int32"
+        },
+        {
+          "field": "Num",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerUseItemC2S"
+    },
+    {
+      "name": "GamerNotifyMailS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "LeftMailNum",
+          "type": "int32"
+        },
+        {
+          "field": "Mails",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerNotifyMailS2C"
+    },
+    {
+      "name": "GamerNotifyRoomStateChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "State",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyRoomStateChangeS2C"
+    },
+    {
+      "name": "GMC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Gm",
+          "type": "string"
+        }
+      ],
+      "title": "GMC2S"
+    },
+    {
+      "name": "GamerDelHaveReadMailS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerDelHaveReadMailS2C"
+    },
+    {
+      "name": "GamerNotifyPVPStateSyncS2C",
+      "properties": [
+        {
+          "field": "StateSync",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerNotifyPVPStateSyncS2C"
+    },
+    {
+      "name": "GamerCancelMatchC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerCancelMatchC2S"
+    },
+    {
+      "name": "GamerSellItemS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerSellItemS2C"
+    },
+    {
+      "name": "GamerGetMailC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerGetMailC2S"
+    },
+    {
+      "name": "GetActivityRewardC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ActivityId",
+          "type": "int32"
+        }
+      ],
+      "title": "GetActivityRewardC2S"
+    },
+    {
+      "name": "GamerBuyItemS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerBuyItemS2C"
+    },
+    {
+      "name": "GamerGetMailS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerGetMailS2C"
+    },
+    {
+      "name": "GamerLeaveRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        }
+      ],
+      "title": "GamerLeaveRoomC2S"
+    },
+    {
+      "name": "GamerGetAllowanceS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Type",
+          "type": "int32"
+        },
+        {
+          "field": "Items",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerGetAllowanceS2C"
+    },
+    {
+      "name": "GamerNotifyLoginOtherS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyLoginOtherS2C"
+    },
+    {
+      "name": "GamerPVPSyncS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerPVPSyncS2C"
+    },
+    {
+      "name": "GamerNotifyGashaponInfoS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Infos",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerNotifyGashaponInfoS2C"
+    },
+    {
+      "name": "GamerProcessFriendReqC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Oid",
+          "type": "int32"
+        },
+        {
+          "field": "Result",
+          "type": "bool"
+        }
+      ],
+      "title": "GamerProcessFriendReqC2S"
+    },
+    {
+      "name": "GamerNotifyNewMailS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Mails",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerNotifyNewMailS2C"
+    },
+    {
+      "name": "GMS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GMS2C"
+    },
+    {
+      "name": "GamerChangeNameC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "NewName",
+          "type": "string"
+        }
+      ],
+      "title": "GamerChangeNameC2S"
+    },
+    {
+      "name": "GamerChangeNameS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerChangeNameS2C"
+    },
+    {
+      "name": "GamerNewRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Type",
+          "type": "int32"
+        },
+        {
+          "field": "Hero",
+          "type": "int32"
+        },
+        {
+          "field": "Name",
+          "type": "string"
+        }
+      ],
+      "title": "GamerNewRoomC2S"
+    },
+    {
+      "name": "GamerLoginGetDataS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Time",
+          "type": "ptr"
+        },
+        {
+          "field": "FriendReqs",
+          "type": "slice"
+        },
+        {
+          "field": "Friends",
+          "type": "slice"
+        },
+        {
+          "field": "Heros",
+          "type": "slice"
+        },
+        {
+          "field": "Items",
+          "type": "slice"
+        },
+        {
+          "field": "LengthRank",
+          "type": "int32"
+        },
+        {
+          "field": "Length",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerLoginGetDataS2C"
+    },
+    {
+      "name": "GamerGetRewardS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerGetRewardS2C"
+    },
+    {
+      "name": "GamerNotifyExpLevelS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Exp",
+          "type": "int32"
+        },
+        {
+          "field": "Level",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyExpLevelS2C"
+    },
+    {
+      "name": "GamerDelFriendC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Oid",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerDelFriendC2S"
+    },
+    {
+      "name": "GamerGetRealTimeRankS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Ranks",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerGetRealTimeRankS2C"
+    },
+    {
+      "name": "GamerNotifyItemChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "ItemsChange",
+          "type": "slice"
+        }
+      ],
+      "title": "GamerNotifyItemChangeS2C"
+    },
+    {
+      "name": "GamerChoseHeroS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Hero",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerChoseHeroS2C"
+    },
+    {
+      "name": "GamerBuyItemC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Item",
+          "type": "int32"
+        },
+        {
+          "field": "Count",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerBuyItemC2S"
+    },
+    {
+      "name": "GamerPVPStateSyncC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Session",
+          "type": "string"
+        },
+        {
+          "field": "Result",
+          "type": "ptr"
+        },
+        {
+          "field": "StateSync",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerPVPStateSyncC2S"
+    },
+    {
+      "name": "GamerWorldChatS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerWorldChatS2C"
+    },
+    {
+      "name": "GamerNewFriendReqC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Oid",
+          "type": "int32"
+        },
+        {
+          "field": "Msg",
+          "type": "string"
+        }
+      ],
+      "title": "GamerNewFriendReqC2S"
+    },
+    {
+      "name": "GamerNotifyIconChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Icon",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyIconChangeS2C"
+    },
+    {
+      "name": "RoomListS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "RoomList",
+          "type": "slice"
+        }
+      ],
+      "title": "RoomListS2C"
+    },
+    {
+      "name": "GamerMatchS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerMatchS2C"
+    },
+    {
+      "name": "GamerCancelMatchS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerCancelMatchS2C"
+    },
+    {
+      "name": "GamerTestChatC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ToId",
+          "type": "int32"
+        },
+        {
+          "field": "Msg",
+          "type": "string"
+        }
+      ],
+      "title": "GamerTestChatC2S"
+    },
+    {
+      "name": "GamerLoginS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Main",
+          "type": "ptr"
+        }
+      ],
+      "title": "GamerLoginS2C"
+    },
+    {
+      "name": "GamerUpgradeHeroC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Lid",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerUpgradeHeroC2S"
+    },
+    {
+      "name": "GamerExtractGashaponC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "GashaponId",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerExtractGashaponC2S"
+    },
+    {
+      "name": "GamerSubChatChannelC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Channel",
+          "type": "int32"
+        },
+        {
+          "field": "Open",
+          "type": "bool"
+        }
+      ],
+      "title": "GamerSubChatChannelC2S"
+    },
+    {
+      "name": "GamerCompoundItemC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "ItemId",
+          "type": "int32"
+        },
+        {
+          "field": "Num",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerCompoundItemC2S"
+    },
+    {
+      "name": "GamerSplitItemS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerSplitItemS2C"
+    },
+    {
+      "name": "GamerChangeReadyInRoomC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        }
+      ],
+      "title": "GamerChangeReadyInRoomC2S"
+    },
+    {
+      "name": "GamerUseIconS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerUseIconS2C"
+    },
+    {
+      "name": "GamerCompoundItemS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerCompoundItemS2C"
     },
     {
       "name": "GamerUseIconC2S",
@@ -3953,87 +1453,157 @@
       "title": "GamerUseIconC2S"
     },
     {
-      "name": "GamerNotifyExpChangeS2C",
+      "name": "GamerNotifyItemS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         },
         {
-          "field": "Exp",
-          "type": "int32"
+          "field": "Item",
+          "type": "ptr"
         }
       ],
-      "title": "GamerNotifyExpChangeS2C"
+      "title": "GamerNotifyItemS2C"
     },
     {
-      "name": "GamerNotifyDiamonChangeS2C",
+      "name": "GamerNewRoomS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         },
         {
-          "field": "Diamon",
-          "type": "int32"
+          "field": "Room",
+          "type": "ptr"
         }
       ],
-      "title": "GamerNotifyDiamonChangeS2C"
+      "title": "GamerNewRoomS2C"
     },
     {
-      "name": "GamerCancelMatchS2C",
+      "name": "GamerUploadWXInfoS2C",
       "properties": [
         {
           "field": "Error",
           "type": "int32"
         }
       ],
-      "title": "GamerCancelMatchS2C"
+      "title": "GamerUploadWXInfoS2C"
     },
     {
-      "name": "GamerGetRealTimeRankC2S",
+      "name": "GamerNotifyMatchInfoS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "MatchInfo",
+          "type": "ptr"
+        },
+        {
+          "field": "Reconn",
+          "type": "bool"
+        }
+      ],
+      "title": "GamerNotifyMatchInfoS2C"
+    },
+    {
+      "name": "GamerOneKeyRcvMailRewardS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerOneKeyRcvMailRewardS2C"
+    },
+    {
+      "name": "GamerChoseHeroC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Lid",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerChoseHeroC2S"
+    },
+    {
+      "name": "GamerGetAllowanceC2S",
+      "properties": [
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Type",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerGetAllowanceC2S"
+    },
+    {
+      "name": "GamerNotifyEnergyChangeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Energy",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerNotifyEnergyChangeS2C"
+    },
+    {
+      "name": "GamerLoginGetDataC2S",
       "properties": [
         {
           "field": "Id",
           "type": "int32"
         }
       ],
-      "title": "GamerGetRealTimeRankC2S"
+      "title": "GamerLoginGetDataC2S"
     },
     {
-      "name": "GamerExtractGashaponS2C",
+      "name": "GamerFriendChatC2S",
       "properties": [
         {
-          "field": "Error",
+          "field": "Id",
           "type": "int32"
         },
         {
-          "field": "GashaponId",
+          "field": "ToId",
           "type": "int32"
         },
         {
-          "field": "Items",
-          "type": "slice"
+          "field": "Msg",
+          "type": "string"
         }
       ],
-      "title": "GamerExtractGashaponS2C"
+      "title": "GamerFriendChatC2S"
     },
     {
-      "name": "GamerGetBackpackS2C",
+      "name": "GamerGetRewardC2S",
       "properties": [
         {
-          "field": "Error",
+          "field": "Id",
           "type": "int32"
         },
         {
-          "field": "Items",
-          "type": "slice"
+          "field": "Type",
+          "type": "int32"
         }
       ],
-      "title": "GamerGetBackpackS2C"
+      "title": "GamerGetRewardC2S"
     },
     {
-      "name": "GamerChoseHeroS2C",
+      "name": "GamerUpgradeHeroS2C",
       "properties": [
         {
           "field": "Error",
@@ -4044,707 +1614,77 @@
           "type": "ptr"
         }
       ],
-      "title": "GamerChoseHeroS2C"
+      "title": "GamerUpgradeHeroS2C"
     },
     {
-      "name": "GamerFriendChatS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerFriendChatS2C"
-    },
-    {
-      "name": "GamerWorldChatS2C",
-      "properties": [
-        {
-          "field": "Error",
-          "type": "int32"
-        }
-      ],
-      "title": "GamerWorldChatS2C"
-    },
-    {
-      "name": "GamerUploadWXInfoC2S",
+      "name": "GamerMatchC2S",
       "properties": [
         {
           "field": "Id",
           "type": "int32"
         },
         {
-          "field": "WxInfo",
+          "field": "Type",
+          "type": "int32"
+        },
+        {
+          "field": "Hero",
+          "type": "int32"
+        },
+        {
+          "field": "RoomId",
+          "type": "uint32"
+        }
+      ],
+      "title": "GamerMatchC2S"
+    },
+    {
+      "name": "ServerTimeS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Time",
           "type": "ptr"
         }
       ],
-      "title": "GamerUploadWXInfoC2S"
+      "title": "ServerTimeS2C"
+    },
+    {
+      "name": "GamerClubRequestS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        },
+        {
+          "field": "Id",
+          "type": "int32"
+        },
+        {
+          "field": "Ok",
+          "type": "bool"
+        }
+      ],
+      "title": "GamerClubRequestS2C"
+    },
+    {
+      "name": "GamerChangeMailStateS2C",
+      "properties": [
+        {
+          "field": "Error",
+          "type": "int32"
+        }
+      ],
+      "title": "GamerChangeMailStateS2C"
     },
     {
       "name": "pb",
       "properties": [
         {
-          "field": "LeagueData",
-          "type": "struct"
-        },
-        {
-          "field": "OnlineLeague",
-          "type": "struct"
-        },
-        {
-          "field": "S2C",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewWorldChat",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewWorldMail",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyDelGamerFriend",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyAccessToken",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewGamerMail",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyGamerLogin",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewGamerFriend",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewGamer",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewLogicArea",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewGamerFriendReq",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewPVPResult",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyGamerLogout",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyGamerUpdate",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotifyNewGamerChat",
-          "type": "struct"
-        },
-        {
-          "field": "RedisNotify",
-          "type": "struct"
-        },
-        {
-          "field": "Black",
-          "type": "struct"
-        },
-        {
-          "field": "OrderNotify",
-          "type": "struct"
-        },
-        {
-          "field": "UserRoleInfo",
-          "type": "struct"
-        },
-        {
-          "field": "Line",
-          "type": "struct"
-        },
-        {
-          "field": "LogicServerInfo",
-          "type": "struct"
-        },
-        {
-          "field": "UserInfo",
-          "type": "struct"
-        },
-        {
-          "field": "SuperAccount",
-          "type": "struct"
-        },
-        {
-          "field": "ServerCmd",
-          "type": "struct"
-        },
-        {
-          "field": "ServerInfo",
-          "type": "struct"
-        },
-        {
-          "field": "ServerWarn",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_Pillar",
-          "type": "struct"
-        },
-        {
-          "field": "ServerTime",
-          "type": "struct"
-        },
-        {
-          "field": "WXInfo",
-          "type": "struct"
-        },
-        {
-          "field": "GamerBlack",
-          "type": "struct"
-        },
-        {
-          "field": "GameItem",
-          "type": "struct"
-        },
-        {
-          "field": "PVPInput",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_GamerEnter",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_S2C",
-          "type": "struct"
-        },
-        {
-          "field": "PVPResult",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_GamerInfo",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_Jump",
-          "type": "struct"
-        },
-        {
-          "field": "CountActivity",
-          "type": "struct"
-        },
-        {
-          "field": "GamerFriend",
-          "type": "struct"
-        },
-        {
-          "field": "GamerHero",
-          "type": "struct"
-        },
-        {
-          "field": "PVPFrames",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_MatchInfo",
-          "type": "struct"
-        },
-        {
-          "field": "GamerFriendRequest",
-          "type": "struct"
-        },
-        {
-          "field": "RoomInfo",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_CheckPoint",
-          "type": "struct"
-        },
-        {
-          "field": "RankLength",
-          "type": "struct"
-        },
-        {
-          "field": "Gashapon",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_Result",
-          "type": "struct"
-        },
-        {
-          "field": "GamerMini",
-          "type": "struct"
-        },
-        {
-          "field": "GamerMatch",
-          "type": "struct"
-        },
-        {
-          "field": "PrevC2S",
-          "type": "struct"
-        },
-        {
-          "field": "Mail",
-          "type": "struct"
-        },
-        {
-          "field": "BagItem",
-          "type": "struct"
-        },
-        {
-          "field": "NumberRecord",
-          "type": "struct"
-        },
-        {
-          "field": "ChatData",
-          "type": "struct"
-        },
-        {
-          "field": "TimeRecord",
-          "type": "struct"
-        },
-        {
-          "field": "GamerMain",
-          "type": "struct"
-        },
-        {
-          "field": "MatchInfo",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_Item",
-          "type": "struct"
-        },
-        {
-          "field": "PVPStateSync_C2S",
-          "type": "struct"
-        },
-        {
-          "field": "PVPFrame",
-          "type": "struct"
-        },
-        {
-          "field": "RoomMemInfo",
-          "type": "struct"
-        },
-        {
-          "field": "C2S",
-          "type": "struct"
-        },
-        {
-          "field": "ServerHello",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyList",
-          "type": "struct"
-        },
-        {
-          "field": "GamerExitPVP",
-          "type": "struct"
-        },
-        {
-          "field": "RPC",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotify",
-          "type": "struct"
-        },
-        {
-          "field": "InnerGamerLogout",
-          "type": "struct"
-        },
-        {
-          "field": "InnerNewGamerFriend",
-          "type": "struct"
-        },
-        {
-          "field": "InnerNewPVPResult",
-          "type": "struct"
-        },
-        {
-          "field": "InnerMatchOk",
-          "type": "struct"
-        },
-        {
-          "field": "InnerGamerExitPVP",
-          "type": "struct"
-        },
-        {
-          "field": "Inner",
-          "type": "struct"
-        },
-        {
-          "field": "InnerNewGamerChat",
-          "type": "struct"
-        },
-        {
-          "field": "InnerNewGamerMail",
-          "type": "struct"
-        },
-        {
-          "field": "InnerNewGamerFriendReq",
-          "type": "struct"
-        },
-        {
-          "field": "InnerDelGamerFriend",
-          "type": "struct"
-        },
-        {
-          "field": "InnerGetModelData",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyAddRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyActivitiesS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerBuyItemC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerOneKeyRcvMailRewardS2C",
-          "type": "struct"
-        },
-        {
-          "field": "ServerTimeS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerSplitItemC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerExtractGashaponC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetRewardC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerPVPSyncC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyExpLevelS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerPVPSyncS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyLoginOtherS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyNewPVPResultS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyPVPStateSyncS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewFriendReqS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyDelFriendS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyMatchInfoS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerUseIconS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerSubChatChannelS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GetActivityRewardS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetRewardS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLoginGetDataC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeNameC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerClubRequestS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewHeroS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeReadyInRoomC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerWorldChatC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyGashaponInfoS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerUpgradeHeroC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerPVPStateSyncC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewFriendReqC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLeaveRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyLeaveRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerDelHaveReadMailS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyItemS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerCompoundItemC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyNewMailS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetAllowanceC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerSubChatChannelC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerBuyItemS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyEnergyChangeS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeReadyInRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyRoomInfoChangeS2C",
-          "type": "struct"
-        },
-        {
-          "field": "RoomListS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GetActivityRewardC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLoginC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerDelFriendC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerCheckPVPBattleC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyChangeReadyInRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerCancelMatchC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerCompoundItemS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetMailS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerOneKeyRcvMailRewardC2S",
-          "type": "struct"
-        },
-        {
-          "field": "ServerTimeC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyRoomStateChangeS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyIconChangeS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerProcessFriendReqC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyMailS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerDelMailS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLoginS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerTestChatS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyNewChatS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyNewFriendS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewHeroC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerMatchS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNewRoomC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeMailStateC2S",
-          "type": "struct"
-        },
-        {
-          "field": "RoomListC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLoginGetDataS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerSellItemC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerUseItemC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerFriendChatC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerCheckPVPBattleS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerAddRoomS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerLeaveRoomC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerDelMailC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyGamerMiniS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChoseHeroC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetAllowanceS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerAddRoomC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetMailC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GMC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyItemChangeS2C",
+          "field": "GamerGetBackpackC2S",
           "type": "struct"
         },
         {
@@ -4752,27 +1692,19 @@
           "type": "struct"
         },
         {
-          "field": "GamerMatchC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GMS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeNameS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerPVPStateSyncS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerTestChatC2S",
+          "field": "GamerChangeReadyInRoomS2C",
           "type": "struct"
         },
         {
           "field": "GamerNotifyNewFriendReqS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerPVPSyncC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GetActivityRewardS2C",
           "type": "struct"
         },
         {
@@ -4784,15 +1716,19 @@
           "type": "struct"
         },
         {
-          "field": "GamerUpgradeHeroS2C",
+          "field": "GamerCheckPVPBattleC2S",
           "type": "struct"
         },
         {
-          "field": "GamerGetRealTimeRankS2C",
+          "field": "GamerNotifyNewFriendS2C",
           "type": "struct"
         },
         {
-          "field": "GamerSellItemS2C",
+          "field": "GamerNotifyActivitiesS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSplitItemC2S",
           "type": "struct"
         },
         {
@@ -4800,35 +1736,11 @@
           "type": "struct"
         },
         {
-          "field": "GamerNotifyPVPSyncS2C",
+          "field": "GamerNotifyLeaveRoomS2C",
           "type": "struct"
         },
         {
-          "field": "GamerSplitItemS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerGetBackpackC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerChangeMailStateS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerClubRequestC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerUploadWXInfoS2C",
-          "type": "struct"
-        },
-        {
-          "field": "GamerUseIconC2S",
-          "type": "struct"
-        },
-        {
-          "field": "GamerNotifyExpChangeS2C",
+          "field": "GamerNewFriendReqS2C",
           "type": "struct"
         },
         {
@@ -4836,7 +1748,15 @@
           "type": "struct"
         },
         {
-          "field": "GamerCancelMatchS2C",
+          "field": "GamerExtractGashaponS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyNewChatS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyPVPSyncS2C",
           "type": "struct"
         },
         {
@@ -4844,15 +1764,87 @@
           "type": "struct"
         },
         {
-          "field": "GamerExtractGashaponS2C",
+          "field": "GamerAddRoomC2S",
           "type": "struct"
         },
         {
-          "field": "GamerGetBackpackS2C",
+          "field": "GamerDelMailC2S",
           "type": "struct"
         },
         {
-          "field": "GamerChoseHeroS2C",
+          "field": "GamerNotifyChangeReadyInRoomS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyRoomInfoChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerWorldChatC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerTestChatS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyDelFriendS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyGamerMiniS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUploadWXInfoC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNewHeroC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyNewPVPResultS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyAddRoomS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerDelMailS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerOneKeyRcvMailRewardC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChangeMailStateC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNewHeroS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSellItemC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerCheckPVPBattleS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerClubRequestC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerPVPStateSyncS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginC2S",
           "type": "struct"
         },
         {
@@ -4860,11 +1852,291 @@
           "type": "struct"
         },
         {
+          "field": "GamerAddRoomS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLeaveRoomS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetBackpackS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyExpChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSubChatChannelS2C",
+          "type": "struct"
+        },
+        {
+          "field": "RoomListC2S",
+          "type": "struct"
+        },
+        {
+          "field": "ServerTimeC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUseItemC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyMailS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyRoomStateChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GMC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerDelHaveReadMailS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyPVPStateSyncS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerCancelMatchC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSellItemS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetMailC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GetActivityRewardC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerBuyItemS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetMailS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLeaveRoomC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetAllowanceS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyLoginOtherS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerPVPSyncS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyGashaponInfoS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerProcessFriendReqC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyNewMailS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GMS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChangeNameC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChangeNameS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNewRoomC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginGetDataS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetRewardS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyExpLevelS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerDelFriendC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetRealTimeRankS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyItemChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChoseHeroS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerBuyItemC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerPVPStateSyncC2S",
+          "type": "struct"
+        },
+        {
           "field": "GamerWorldChatS2C",
           "type": "struct"
         },
         {
-          "field": "GamerUploadWXInfoC2S",
+          "field": "GamerNewFriendReqC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyIconChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "RoomListS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerMatchS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerCancelMatchS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerTestChatC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUpgradeHeroC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerExtractGashaponC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSubChatChannelC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerCompoundItemC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerSplitItemS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChangeReadyInRoomC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUseIconS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerCompoundItemS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUseIconC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyItemS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNewRoomS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUploadWXInfoS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyMatchInfoS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerOneKeyRcvMailRewardS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChoseHeroC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetAllowanceC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerNotifyEnergyChangeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerLoginGetDataC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerFriendChatC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerGetRewardC2S",
+          "type": "struct"
+        },
+        {
+          "field": "GamerUpgradeHeroS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerMatchC2S",
+          "type": "struct"
+        },
+        {
+          "field": "ServerTimeS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerClubRequestS2C",
+          "type": "struct"
+        },
+        {
+          "field": "GamerChangeMailStateS2C",
           "type": "struct"
         }
       ],

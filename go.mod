@@ -6,6 +6,7 @@ require (
 	9fans.net/go v0.0.2 // indirect
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/elastic/go-elasticsearch/v6 v6.8.5 // indirect
 	github.com/elastic/go-elasticsearch/v7 v7.5.0
 	github.com/golang/lint v0.0.0-20190930215403-16217165b5de // indirect
 	github.com/golang/protobuf v1.3.2
