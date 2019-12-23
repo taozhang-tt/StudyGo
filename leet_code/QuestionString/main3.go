@@ -16,27 +16,26 @@ func main() {
 	fmt.Println(num2)
 }
 
-/*
- */
+//窗口滑动法，左闭右开
 func lengthOfLongestSubstring(s string) int {
 	var (
-		left   = 0
-		right  = 0
-		max    = 0
+		left   = 0	//窗口左边界
+		right  = 0	//窗口右边界
+		max    = 0	//窗口最大宽度
 		sSlice = strings.Split(s, "")
 		sMap   = make(map[string]int)
 		length = len(sSlice)
 	)
 	for ; left < length && right < length; {
-		charRight := sSlice[right]
-		if _, exist := sMap[charRight]; exist {
-			charLeft := sSlice[left]
+		charRight := sSlice[right]	//取右边界字符
+		if _, exist := sMap[charRight]; exist {	//如果右边界字符已经存在于窗口中
+			charLeft := sSlice[left]	//向右移动左边界，右边界保持不动
 			delete(sMap, charLeft)
 			left++
-		} else {
-			sMap[charRight] = right
-			right++
-			if distance := right - left; distance > max {
+		} else {	//如果窗口中并未包含右边界对应的字符
+			sMap[charRight] = right	//将该字符存入窗口
+			right++	//窗口边界右移
+			if distance := right - left; distance > max {	//判断当前窗口，记录较大值
 				max = distance
 			}
 		}
@@ -44,6 +43,7 @@ func lengthOfLongestSubstring(s string) int {
 	return max
 }
 
+//窗口滑动法优化，左闭右开
 func lengthOfLongestSubstring2(s string) int {
 	var (
 		left   = 0
