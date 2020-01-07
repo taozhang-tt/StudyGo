@@ -5,12 +5,16 @@ go 1.12
 require (
 	9fans.net/go v0.0.2 // indirect
 	github.com/bitly/go-simplejson v0.5.0
-	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/coreos/etcd v3.3.18+incompatible // indirect
+	github.com/coreos/go-systemd v0.0.0-00010101000000-000000000000 // indirect
+	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/elastic/go-elasticsearch/v6 v6.8.5 // indirect
 	github.com/elastic/go-elasticsearch/v7 v7.5.0
+	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/lint v0.0.0-20190930215403-16217165b5de // indirect
 	github.com/golang/protobuf v1.3.2
 	github.com/golang/snappy v0.0.1 // indirect
+	github.com/google/uuid v1.1.1 // indirect
 	github.com/gorhill/cronexpr v0.0.0-20180427100037-88b0669f7d75 // indirect
 	github.com/gorilla/websocket v1.4.1
 	github.com/lukehoban/go-find-references v0.0.0-20150918174914-42505ef666d1 // indirect
@@ -23,6 +27,8 @@ require (
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
 	github.com/stretchr/objx v0.1.1 // indirect
+	go.etcd.io/etcd v3.3.18+incompatible // indirect
+	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/crypto v0.0.0-20191117063200-497ca9f6d64f // indirect
 	golang.org/x/net v0.0.0-20191119073136-fc4aabc6c914 // indirect
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
@@ -34,3 +40,5 @@ require (
 )
 
 replace github.com/golang/lint => golang.org/x/lint v0.0.0-20190930215403-16217165b5de
+
+replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
