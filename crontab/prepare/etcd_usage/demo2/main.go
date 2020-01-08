@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+//etcd 写操作
 func main()  {
 	var (
 		client *clientv3.Client
