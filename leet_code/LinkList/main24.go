@@ -6,7 +6,7 @@ func main()  {
 	head := generateList(1, 2, 3, 4, 5)
 	printList(head)
 	fmt.Println("----")
-	head = swapPairs3(head)
+	head = swapPairs4(head)
 	printList(head)
 }
 
@@ -59,4 +59,18 @@ func swapPairs3(head *ListNode) *ListNode {
 	head.Next = swapPairs3(next.Next)
 	next.Next = head
 	return next
+}
+
+func swapPairs4(head *ListNode) *ListNode {
+	var prev = new(ListNode)
+	prev.Next = head
+	var initPrev = prev
+	for {
+		if prev.Next == nil || prev.Next.Next == nil {
+			return initPrev.Next
+		}
+		a, b := prev.Next, prev.Next.Next
+		prev.Next, b.Next, a.Next = b, a, b.Next
+		prev = a
+	}
 }

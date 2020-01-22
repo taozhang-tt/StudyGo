@@ -9,7 +9,7 @@ package main
 
 func main() {
 	head := generateList(1, 2, 3, 4, 5)
-	head = reverseList3(head)
+	head = reverseList4(head)
 	printList(head)
 }
 //添加了一个空的头指针
@@ -60,4 +60,14 @@ func reverseList3(head *ListNode) *ListNode {
 	head.Next.Next = head
 	head.Next = nil
 	return finalHead
+}
+
+func reverseList4(head *ListNode) *ListNode {
+	var prev *ListNode
+	for {
+		if head == nil {
+			return prev
+		}
+		head.Next, prev, head = prev, head, head.Next
+	}
 }
