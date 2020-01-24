@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-import ""
 
 //利用双端队列，一个可用但是效率不高的做法
 func maxSlidingWindow(nums []int, k int) []int {
@@ -51,28 +50,7 @@ func main() {
 	fmt.Println(ret)
 }
 
-func maxSlidingWindow2(nums []int, k int) []int {
-	if len(nums) == 0 || len(nums) < k {
-		return make([]int, 0)
-	}
-	window := make([]int, 0, k) // store the index of nums
-	result := make([]int, 0, len(nums)-k+1)
-	for i, v := range nums { // if the left-most index is out of window, remove it
-		if i >= k && window[0] <= i-k {
-			window = window[1:len(window)]
-		}
-		for len(window) > 0 && nums[window[len(window)-1]] < v { // maintain window
-			window = window[0 : len(window)-1]
-		}
-		window = append(window, i) // store the index of nums
-		if i >= k-1 {
-			result = append(result, nums[window[0]]) // the left-most is the index of max value in nums
-		}
-	}
-	return result
-}
-
-//利用双端队列，借鉴了极客时间
+//利用双端队列，借鉴了极客时间的思路和leetcode-go项目的代码
 func maxSlidingWindow3(nums []int, k int) []int {
 	if len(nums) == 0 || len(nums) < k {
 		return make([]int, 0)
@@ -85,7 +63,7 @@ func maxSlidingWindow3(nums []int, k int) []int {
 		if index >= k && window[0] <= index-k { //窗口滑动时，判断窗口的最左侧保存的下标是否已经滑动到窗口外
 			window = window[1:]
 		}
-		for len(window) > 0 && nums[window[len(window)-1]] < value {
+		for len(window) > 0 && nums[window[len(window)-1]] < value {	//将窗口中所有小于新元素的索引踢出（从小到大）
 			window = window[0 : len(window)-1]
 		}
 		window = append(window, index)
