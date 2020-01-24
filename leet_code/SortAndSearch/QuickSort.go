@@ -8,31 +8,35 @@ import "fmt"
 //4，重复步骤 2，3 直到 l == r，将 mid 元素 保存到 nums[l] 中，数组的坑被填满
 //5，步骤 4 结束后，数组已被 mid 元素分为两部分，mid 前面的元素全部小于 mid，后面的元素全部大于mid，此时递归调用函数对两部分元素分别进行排序
 func QuickSort(nums []int, left int, right int) {
-	if !(left < right) {
+	if left >= right {
 		return
 	}
 	l := left
 	r := right
 	mid := nums[l]
-	for l < r && nums[r] > mid {
-		r--
-	}
-	if l < r {
-		nums[l] = nums[r]
-	}
-	for l < r && nums[l] < mid {
-		l++
-	}
-	if l < r {
-		nums[r] = nums[l]
+	for l < r {
+		for l < r && nums[r] > mid {
+			r--
+		}
+		if l < r {
+			nums[l] = nums[r]
+			l++
+		}
+		for l < r && nums[l] < mid {
+			l++
+		}
+		if l < r {
+			nums[r] = nums[l]
+			r--
+		}
 	}
 	nums[l] = mid
-	QuickSort(nums, left, l)
+	QuickSort(nums, left, l-1)
 	QuickSort(nums, l+1, right)
 }
 
 func main() {
-	nums := []int{9, 4, 3, 5, 6, 1, 2}
+	nums := []int{97, 110, 97, 103, 114, 97, 109}
 	QuickSort(nums, 0, len(nums)-1)
 	fmt.Println(nums)
 }
