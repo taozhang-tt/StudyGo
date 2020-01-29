@@ -73,9 +73,16 @@ func inOrder(root *TreeNode) []*TreeNode {
 }
 
 //中序遍历的优化版，每次遍历的时候保存前继节点，判断当前节点是否大于前继节点即可
-//这里有一点问题是，prev 要是一个全局作用域，即是说每次递归调用时修改了它的值，它应该是同步的，所以这里思路写出来了，但是无法通过
+//根据定义可知，中序遍历二叉排序树，每次遍历的节点值依此增大，那我们可以在遍历某个节点时，记录下它的值，在遍历下个节点时做比较，判断当前节点的值是否大于上一个节点
 func isValidBST2(root *TreeNode) bool {
-	var prev *TreeNode
+	intMax := int(^uint(0) >> 1)
+	intMin := ^intMax
+	//初始化一个默认的前继节点，节点的值为最小整数
+	var prev = &TreeNode{
+		Val:   intMin,
+		Left:  nil,
+		Right: nil,
+	}
 	return helper(root, prev)
 }
 
@@ -86,10 +93,11 @@ func helper(root *TreeNode, prev *TreeNode) bool {
 	if !helper(root.Left, prev) {
 		return false
 	}
+	//遍历了该节点，那该节点为下一个被遍历的节点的前继节点
 	if prev != nil && prev.Val >= root.Val {
 		return false
 	}
-	prev = root
+	prev.Val = root.Val
 	return helper(root.Right, prev)
 }
 
