@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	grid := [][]byte{
@@ -9,7 +11,7 @@ func main() {
 		[]byte{'1', '1', '0', '0', '0'},
 		[]byte{'0', '0', '0', '0', '0'},
 	}
-	fmt.Println(numIslands(grid))
+	fmt.Println(numIslands2(grid))
 
 	grid = [][]byte{
 		[]byte{'1', '1', '0', '0', '0'},
@@ -17,7 +19,7 @@ func main() {
 		[]byte{'0', '0', '1', '0', '0'},
 		[]byte{'0', '0', '0', '1', '1'},
 	}
-	fmt.Println(numIslands(grid))
+	fmt.Println(numIslands2(grid))
 
 	grid = [][]byte{
 		[]byte{'1', '1', '1', '1', '0'},
@@ -25,7 +27,31 @@ func main() {
 		[]byte{'1', '1', '0', '0', '0'},
 		[]byte{'0', '0', '0', '0', '0'},
 	}
-	fmt.Println(numIslands(grid))
+	fmt.Println(numIslands2(grid))
+
+	grid = [][]byte{
+		[]byte{'1','0','0','1','1','1','0','1','1','0','0','0','0','0','0','0','0','0','0','0'},
+		[]byte{'1','0','0','1','1','0','0','1','0','0','0','1','0','1','0','1','0','0','1','0'},
+		[]byte{'0','0','0','1','1','1','1','0','1','0','1','1','0','0','0','0','1','0','1','0'},
+		[]byte{'0','0','0','1','1','0','0','1','0','0','0','1','1','1','0','0','1','0','0','1'},
+		[]byte{'0','0','0','0','0','0','0','1','1','1','0','0','0','0','0','0','0','0','0','0'},
+		[]byte{'1','0','0','0','0','1','0','1','0','1','1','0','0','0','0','0','0','1','0','1'},
+		[]byte{'0','0','0','1','0','0','0','1','0','1','0','1','0','1','0','1','0','1','0','1'},
+		[]byte{'0','0','0','1','0','1','0','0','1','1','0','1','0','1','1','0','1','1','1','0'},
+		[]byte{'0','0','0','0','1','0','0','1','1','0','0','0','0','1','0','0','0','1','0','1'},
+		[]byte{'0','0','1','0','0','1','0','0','0','0','0','1','0','0','1','0','0','0','1','0'},
+		[]byte{'1','0','0','1','0','0','0','0','0','0','0','1','0','0','1','0','1','0','1','0'},
+		[]byte{'0','1','0','0','0','1','0','1','0','1','1','0','1','1','1','0','1','1','0','0'},
+		[]byte{'1','1','0','1','0','0','0','0','1','0','0','0','0','0','0','1','0','0','0','1'},
+		[]byte{'0','1','0','0','1','1','1','0','0','0','1','1','1','1','1','0','1','0','0','0'},
+		[]byte{'0','0','1','1','1','0','0','0','1','1','0','0','0','1','0','1','0','0','0','0'},
+		[]byte{'1','0','0','1','0','1','0','0','0','0','1','0','0','0','1','0','1','0','1','1'},
+		[]byte{'1','0','1','0','0','0','0','0','0','1','0','0','0','1','0','1','0','0','0','0'},
+		[]byte{'0','1','1','0','0','0','1','1','1','0','1','0','1','0','1','1','1','1','0','0'},
+		[]byte{'0','1','0','0','0','0','1','1','0','0','1','0','1','0','0','1','0','0','1','1'},
+		[]byte{'0','0','0','0','0','0','1','1','1','1','0','1','0','0','0','1','1','0','0','0'},
+	}
+	fmt.Println(numIslands2(grid))
 }
 
 /**
@@ -59,4 +85,67 @@ func dfsFloodFill(grid [][]byte, x, y int) {
 	}
 }
 
+//使用并查集
+func numIslands2(grid [][]byte) int {
+	dx := [4]int{-1, 1, 0, 0}
+	dy := [4]int{0, 0, -1, 1}
+	height := len(grid)
+	if height == 0 {
+		return 0
+	}
+	width := len(grid[0])
+	unionFind := Construct(grid)
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[0]); j++ {
+			if grid[i][j] == '1' {
+				for k := 0; k < 4; k++ {
+					x := i + dx[k]
+					y := j + dy[k]
+					if x >= 0 && x < height && y >= 0 && y < width && grid[x][y] == '1' {
+						unionFind.Union(i*width + j, x*width + y)
+					}
+				}
+			}
+		}
+	}
+	return unionFind.count
+}
 
+type UnionFind struct {
+	roots []int
+	count int
+}
+
+func Construct(grid [][]byte) *UnionFind {
+	height := len(grid)
+	width := len(grid[0])
+	unionFind := &UnionFind{
+		roots: make([]int, height*width, height*width),
+		count: 0,
+	}
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[0]); j++ {
+			if grid[i][j] == '1' {
+				unionFind.roots[i*width + j] = i*width + j
+				unionFind.count++
+			}
+		}
+	}
+	return unionFind
+}
+
+func (obj *UnionFind) Find(index int) int {
+	if obj.roots[index] != index {
+		obj.roots[index] = obj.Find(obj.roots[index])
+	}
+	return  obj.roots[index]
+}
+
+func (obj *UnionFind) Union(p, q int) {
+	pRoot := obj.Find(p)
+	qRoot := obj.Find(q)
+	if pRoot != qRoot {
+		obj.roots[pRoot] = qRoot
+		obj.count --
+	}
+}
