@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+/**
+120. 三角形最小路径和
+	https://leetcode-cn.com/problems/triangle/
+题目描述：
+	给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。
+*/
+
 func main() {
 	//triangle := [][]int{
 	//	[]int{2},
@@ -99,7 +106,7 @@ func dfs(triangle [][]int, x, y, distance int, ret []int) []int {
 /**
 深度优先搜索算法：
 	只需要返回较短的那个路径即可，这个思路是动态规划的反向思考
- */
+*/
 func minimumTotal4(triangle [][]int) int {
 	return dfs4(triangle, 0, 0, 0)
 }

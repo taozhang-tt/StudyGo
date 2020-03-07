@@ -2,6 +2,16 @@ package main
 
 import "fmt"
 
+/**
+152. 乘积最大子序列
+	https://leetcode-cn.com/problems/maximum-product-subarray/
+题目描述：
+	给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
+示例 1:
+	输入: [2,3,-2,4]
+	输出: 6
+	解释: 子数组 [2,3] 有最大乘积 6。
+*/
 func main() {
 	//nums := []int{2,3,-2,4}
 	nums := []int{-2, 0, -1}
@@ -47,7 +57,7 @@ func maxProduct(nums []int) int {
 /**
 动态规划优化
 	dp 的状态只需要保存前一个位置的即可
- */
+*/
 func maxProduct2(nums []int) int {
 	maxDp, minDp, max := nums[0], nums[0], nums[0]
 	for i := 1; i < len(nums); i++ {

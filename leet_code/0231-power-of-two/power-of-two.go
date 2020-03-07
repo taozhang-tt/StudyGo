@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+/**
+231. 2的幂
+	https://leetcode-cn.com/problems/power-of-two/
+题目描述：
+	给定一个整数，编写一个函数来判断它是否是 2 的幂次方。
+*/
+
 func main() {
 	fmt.Println(isPowerOfTwo2(1))
 	fmt.Println(isPowerOfTwo2(16))
@@ -17,7 +24,7 @@ func isPowerOfTwo(n int) bool {
 		return true
 	}
 	for n > 1 {
-		if n % 2 != 0 {
+		if n%2 != 0 {
 			return false
 		}
 		n /= 2
@@ -30,8 +37,8 @@ func isPowerOfTwo2(n int) bool {
 	if n <= 0 {
 		return false
 	}
-	temp := uint32(n)	//加上这一行，速度快了很多
-	if temp & (temp-1) == 0 {
+	temp := uint32(n) //加上这一行，速度快了很多
+	if temp&(temp-1) == 0 {
 		return true
 	}
 	return false

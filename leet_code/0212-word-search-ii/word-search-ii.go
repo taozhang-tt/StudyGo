@@ -2,6 +2,27 @@ package main
 
 import "fmt"
 
+/**
+212. 单词搜索 II
+	https://leetcode-cn.com/problems/word-search-ii/
+题目描述：
+	给定一个二维网格 board 和一个字典中的单词列表 words，找出所有同时在二维网格和字典中出现的单词。
+	单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母在一个单词中不允许被重复使用。
+示例:
+
+输入:
+	words = ["oath","pea","eat","rain"] and board =
+	[
+	  ['o','a','a','n'],
+	  ['e','t','a','e'],
+	  ['i','h','k','r'],
+	  ['i','f','l','v']
+	]
+输出: ["eat","oath"]
+	说明:
+	你可以假设所有输入都由小写字母 a-z 组成。
+*/
+
 func main() {
 	//board := [][]byte{
 	//	[]byte{'o','a','a','n'},
@@ -19,7 +40,7 @@ func main() {
 		[]byte{'a', 'b'},
 		[]byte{'a', 'a'},
 	}
-	words := []string{"aba","baa","bab","aaab","aaa","aaaa","aaba"}
+	words := []string{"aba", "baa", "bab", "aaab", "aaa", "aaaa", "aaba"}
 	ret := findWords(board, words)
 	fmt.Println(ret)
 }
@@ -54,10 +75,10 @@ func (obj *Trie) Insert(word string) {
 func (obj *Trie) Search(word string) bool {
 	root := obj.Root
 	for _, item := range word {
-		if root.Children[item -'a'] == nil {
+		if root.Children[item-'a'] == nil {
 			return false
 		}
-		root = root.Children[item -'a']
+		root = root.Children[item-'a']
 	}
 	if !root.IsEnd {
 		return false
@@ -76,7 +97,6 @@ func (obj *Trie) StartWith(word string) bool {
 	return true
 }
 
-
 func findWords(board [][]byte, words []string) []string {
 	//先把所有单词保存到字典树中
 	trie := &Trie{
@@ -89,8 +109,8 @@ func findWords(board [][]byte, words []string) []string {
 		trie.Insert(item)
 	}
 	m := make(map[string]bool, 0)
-	for x:=0; x<len(board); x++ {
-		for y:=0; y<len(board[0]); y++ {
+	for x := 0; x < len(board); x++ {
+		for y := 0; y < len(board[0]); y++ {
 			dfs(board, trie, "", x, y, m)
 		}
 	}
@@ -116,10 +136,10 @@ func dfs(board [][]byte, trie *Trie, current string, x, y int, ret map[string]bo
 	dx := [4]int{-1, 1, 0, 0}
 	dy := [4]int{0, 0, -1, 1}
 	sign := false
-	for i:=0; i<4; i++ {
+	for i := 0; i < 4; i++ {
 		xx := x + dx[i]
 		yy := y + dy[i]
-		if xx >=0 && xx<len(board) && yy >=0 && yy<len(board[0]) && board[xx][yy] != '@' {
+		if xx >= 0 && xx < len(board) && yy >= 0 && yy < len(board[0]) && board[xx][yy] != '@' {
 			if _, ok := dfs(board, trie, current, xx, yy, ret); ok {
 				//board[x][y] = char
 				//return board, ok

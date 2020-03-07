@@ -5,6 +5,18 @@ import (
 	"strconv"
 )
 
+/**
+37. 解数独
+	https://leetcode-cn.com/problems/sudoku-solver/
+题目描述：
+	编写一个程序，通过已填充的空格来解决数独问题。
+	一个数独的解法需遵循如下规则：
+	1. 数字 1-9 在每一行只能出现一次。
+	2. 数字 1-9 在每一列只能出现一次。
+	3. 数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+	空白格用 '.' 表示。
+*/
+
 func main() {
 	param := [][]byte{
 		[]byte{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
@@ -30,8 +42,8 @@ func solve(board [][]byte) ([][]byte, bool) {
 	if !isValid(board) {
 		return board, false
 	}
-	for i:=0; i<9; i++ {
-		for j:=0; j<9; j++ {
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
 			cell := string(board[i][j])
 			if cell == "." {
 				for _, item := range [9]byte{'1', '2', '3', '4', '5', '6', '7', '8', '9'} {

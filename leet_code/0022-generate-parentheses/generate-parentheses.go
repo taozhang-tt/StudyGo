@@ -2,6 +2,21 @@ package main
 
 import "fmt"
 
+/**
+22. 括号生成
+	https://leetcode-cn.com/problems/generate-parentheses/
+题目描述：
+	给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
+	例如，给出 n = 3，生成结果为：
+	[
+  	"((()))",
+  	"(()())",
+  	"(())()",
+  	"()(())",
+  	"()()()"
+	]
+*/
+
 func main() {
 	fmt.Println(generateParenthesis(4))
 }
@@ -12,7 +27,7 @@ func main() {
 	如果 左括号数量 == 右括号数量 == n，说明是一个结果，保存下来
 	必须满足 右括号的数量 < 左括号的数量 < n
 
- */
+*/
 func generateParenthesis(n int) []string {
 	ret := make([]string, 0)
 	ret = generate(n, 0, 0, "", ret)
@@ -20,13 +35,13 @@ func generateParenthesis(n int) []string {
 }
 
 func generate(n, leftUsed, rightUsed int, curr string, ret []string) []string {
-	if leftUsed == n && rightUsed == n {	//左括号数量 == 右括号数量 == n，说明是一个结果，保存下来
+	if leftUsed == n && rightUsed == n { //左括号数量 == 右括号数量 == n，说明是一个结果，保存下来
 		return append(ret, curr)
 	}
-	if leftUsed < n {	//左括号是可以随时塞入的，只需要满足 左括号的数量 < n 即可
+	if leftUsed < n { //左括号是可以随时塞入的，只需要满足 左括号的数量 < n 即可
 		ret = generate(n, leftUsed+1, rightUsed, curr+"(", ret)
 	}
-	if rightUsed < leftUsed && rightUsed < n {	//如果想塞入右括号，需要满足 右括号数量 < 左括号数量 && 右括号数量 < n
+	if rightUsed < leftUsed && rightUsed < n { //如果想塞入右括号，需要满足 右括号数量 < 左括号数量 && 右括号数量 < n
 		ret = generate(n, leftUsed, rightUsed+1, curr+")", ret)
 	}
 	return ret

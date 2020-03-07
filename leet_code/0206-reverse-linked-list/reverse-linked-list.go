@@ -1,17 +1,22 @@
 package main
 
-//206. 反转一个单链表。
-//
-//示例:
-//
-//输入: 1->2->3->4->5->NULL
-//输出: 5->4->3->2->1->NULL
+import "fmt"
 
+/**
+206. 反转一个单链表。
+	https://leetcode-cn.com/problems/reverse-linked-list/
+题目描述：
+	反转一个单链表。
+示例:
+	输入: 1->2->3->4->5->NULL
+	输出: 5->4->3->2->1->NULL
+*/
 func main() {
 	head := generateList(1, 2, 3, 4, 5)
 	head = reverseList4(head)
 	printList(head)
 }
+
 //添加了一个空的头指针
 func reverseList(head *ListNode) *ListNode {
 	var prev *ListNode
@@ -69,5 +74,33 @@ func reverseList4(head *ListNode) *ListNode {
 			return prev
 		}
 		head.Next, prev, head = prev, head, head.Next
+	}
+}
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func generateList(param ...int) *ListNode {
+	head := new(ListNode)
+	head.Val = 0
+	current := head
+	for _, value := range param {
+		next := new(ListNode)
+		next.Val = value
+		current.Next = next
+		current = current.Next
+	}
+	return head.Next
+}
+
+func printList(head *ListNode) {
+	for {
+		if head == nil {
+			return
+		}
+		fmt.Print(head.Val, ", ")
+		head = head.Next
 	}
 }

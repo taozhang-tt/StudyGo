@@ -2,6 +2,17 @@ package main
 
 import "fmt"
 
+/**
+169. 多数元素
+	https://leetcode-cn.com/problems/majority-element/
+题目描述：
+	给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
+	你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+示例 1:
+	输入: [3,2,3]
+	输出: 3
+*/
+
 func main() {
 	nums := []int{6, 5, 5}
 	fmt.Println(majorityElement5(nums))
@@ -119,16 +130,16 @@ func majorityElement5(nums []int) int {
 	return find(nums, 0, len(nums)-1)
 }
 func find(nums []int, left, right int) int {
-	if left == right {	//只有一个元素，则为目标众数
+	if left == right { //只有一个元素，则为目标众数
 		return nums[left]
 	}
-	mid := (left + right) / 2	//将问题拆解成两个子问题
+	mid := (left + right) / 2 //将问题拆解成两个子问题
 	lRet := find(nums, left, mid)
 	rRet := find(nums, mid+1, right)
-	if lRet == rRet {	//如果在两个子问题中查找到的众数一致，则该数即为众数
+	if lRet == rRet { //如果在两个子问题中查找到的众数一致，则该数即为众数
 		return lRet
 	}
-	lCount, rCount := 0, 0	//如果两个子问题中查找到的众数不一致，则分别统计两个众数出现的次数，返回较多的那个
+	lCount, rCount := 0, 0 //如果两个子问题中查找到的众数不一致，则分别统计两个众数出现的次数，返回较多的那个
 	for i := left; i <= mid; i++ {
 		if nums[i] == lRet {
 			lCount++

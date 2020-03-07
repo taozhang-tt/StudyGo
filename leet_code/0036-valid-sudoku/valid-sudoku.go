@@ -5,6 +5,16 @@ import (
 	"strconv"
 )
 
+/**
+36. 有效的数独
+	https://leetcode-cn.com/problems/valid-sudoku/
+题目描述：
+	判断一个 9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
+	1. 数字 1-9 在每一行只能出现一次。
+	2. 数字 1-9 在每一列只能出现一次。
+	3. 数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+*/
+
 func main() {
 	param := [][]byte{
 		[]byte{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
@@ -85,7 +95,7 @@ func isValidSudoku(board [][]byte) bool {
   拆分：对于 9*9 的方格，可以拆分为 9 个 3*3 的 box，从左到右从上到下依次编号为 0 ~ 8；
   缓存：那么我们可以用一个二维数组（[9][9])缓存所有box中出现的元素；为了方便直接记录，我们用一个 [9][10] 的数组缓存，这样数字9也可以被直接丢进去
   映射：对于 9*9 方格中的任一元素 （i, j)，怎么确定它属于哪个box呢？对于元素 (i, j)，其所属的 box 编号为：i/3*3 + j/3；（这里的 / 代表整除)
- */
+*/
 func isValidSudoku2(board [][]byte) bool {
 	var boxes, rows, cols [9][10]int
 	for i := 0; i < 9; i++ { //扫描行
@@ -93,7 +103,7 @@ func isValidSudoku2(board [][]byte) bool {
 			cell := string(board[i][j])
 			if cell != "." {
 				cellInt, _ := strconv.Atoi(cell)
-				if rows[i][cellInt] == 1 {	//
+				if rows[i][cellInt] == 1 { //
 					return false
 				}
 				rows[i][cellInt] = 1

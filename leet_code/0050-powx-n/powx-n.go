@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+/**
+50. Pow(x, n)
+	https://leetcode-cn.com/problems/powx-n/
+题目描述：
+	实现 pow(x, n) ，即计算 x 的 n 次幂函数。
+*/
+
 func main() {
 	var x = 2.0
 	var n = -2
@@ -12,10 +19,10 @@ func main() {
 func myPow(x float64, n int) float64 {
 	ret := 1.0
 	if n < 0 {
-		x = 1/x
+		x = 1 / x
 		n = -n
 	}
-	for i:=0; i<n; i++ {
+	for i := 0; i < n; i++ {
 		ret *= x
 	}
 	return ret
@@ -23,15 +30,15 @@ func myPow(x float64, n int) float64 {
 
 /**
 分治法：递归做法
- */
+*/
 func myPow2(x float64, n int) float64 {
 	if n == 0 {
 		return 1.0
 	}
 	if n < 0 {
-		return 1/myPow2(x, -n)
+		return 1 / myPow2(x, -n)
 	}
-	if n % 2 > 0 {	// n为奇数
+	if n%2 > 0 { // n为奇数
 		return myPow2(x, n-1) * x
 	}
 	return myPow2(x*x, n/2)
@@ -42,15 +49,15 @@ func myPow2(x float64, n int) float64 {
 */
 func myPow3(x float64, n int) float64 {
 	if n < 0 {
-		x = 1/x
+		x = 1 / x
 		n = -n
 	}
 	ret := 1.0
 	for n > 0 {
-		if n % 2 > 0 {
+		if n%2 > 0 {
 			ret *= x
 		}
-		x = x*x
+		x = x * x
 		n = n / 2
 	}
 	return ret

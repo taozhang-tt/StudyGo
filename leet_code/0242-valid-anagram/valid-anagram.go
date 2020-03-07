@@ -2,6 +2,23 @@ package main
 
 import "fmt"
 
+/**
+242. 有效的字母异位词
+	https://leetcode-cn.com/problems/valid-anagram/
+题目描述：
+	给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+示例 1:
+	输入: s = "anagram", t = "nagaram"
+	输出: true
+*/
+
+func main() {
+	s := "anagram"
+	t := "nagaram"
+	ret := isAnagram2(s, t)
+	fmt.Println(ret)
+}
+
 //先对两个字符串排序，比较排序后对字符串是否相等
 func isAnagram(s string, t string) bool {
 	ss := []uint8(s)
@@ -59,11 +76,4 @@ func isAnagram2(s string, t string) bool {
 		}
 	}
 	return true
-}
-
-func main() {
-	s := "anagram"
-	t := "nagaram"
-	ret := isAnagram2(s, t)
-	fmt.Println(ret)
 }

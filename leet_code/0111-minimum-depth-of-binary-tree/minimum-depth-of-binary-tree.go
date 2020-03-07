@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+/**
+111. 二叉树的最小深度
+	https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
+题目描述：
+	给定一个二叉树，找出其最小深度。
+	最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+	说明: 叶子节点是指没有子节点的节点。
+*/
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -33,8 +42,8 @@ func main() {
 			},
 		},
 		Right: &TreeNode{
-			Val:   1,
-			Left:  &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
 				Val:   0,
 				Left:  nil,
 				Right: nil,
@@ -60,7 +69,7 @@ func minDepth(root *TreeNode) int {
 	for len(queue) > 0 {
 		min++
 		currLevelSize := len(queue)
-		for i:=0; i<currLevelSize; i++ {
+		for i := 0; i < currLevelSize; i++ {
 			curr := queue[0]
 			if curr.Left == nil && curr.Right == nil {
 				return min

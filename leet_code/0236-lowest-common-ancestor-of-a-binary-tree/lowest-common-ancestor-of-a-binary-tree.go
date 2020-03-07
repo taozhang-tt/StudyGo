@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+/**
+236. 二叉树的最近公共祖先
+	https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
+题目描述：
+	给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+	百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
+ */
+
 func main() {
 	root := &TreeNode{
 		Val: 3,
@@ -27,8 +35,8 @@ func main() {
 			},
 		},
 		Right: &TreeNode{
-			Val:   1,
-			Left:  &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
 				Val:   0,
 				Left:  nil,
 				Right: nil,
@@ -70,7 +78,7 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	} else {
 		long = len(qPath)
 	}
-	for i:=0; i<long; i++ {
+	for i := 0; i < long; i++ {
 		if pPath[i].Val != qPath[i].Val {
 			return pPath[i-1]
 		}
