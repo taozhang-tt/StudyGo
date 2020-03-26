@@ -2,6 +2,21 @@ package main
 
 import "fmt"
 
+/**
+892. 三维形体的表面积
+	https://leetcode-cn.com/problems/surface-area-of-3d-shapes/
+题目描述：
+	在 N * N 的网格上，我们放置一些 1 * 1 * 1  的立方体。
+	每个值 v = grid[i][j] 表示 v 个正方体叠放在对应单元格 (i, j) 上。
+	请你返回最终形体的表面积。
+示例 1：
+	输入：[[2]]
+	输出：10
+示例 2：
+	输入：[[1,2],[3,4]]
+	输出：34
+*/
+
 func main() {
 	var grid = [][]int{
 		[]int{2},
@@ -72,15 +87,15 @@ func surfaceArea2(grid [][]int) int {
 			if grid[x][y] == 0 {
 				continue
 			}
-			total += 2	//贡献上底面和下底面的面积
-			for i := 0; i < 4; i++ {	//判断四周是否有其它形体
+			total += 2               //贡献上底面和下底面的面积
+			for i := 0; i < 4; i++ { //判断四周是否有其它形体
 				xx := x + dx[i]
 				yy := y + dy[i]
-				if xx < 0 || yy < 0 || xx >= len(grid) || yy >= len(grid[0]) {	//某一面在边界部分，直接贡献表面积
+				if xx < 0 || yy < 0 || xx >= len(grid) || yy >= len(grid[0]) { //某一面在边界部分，直接贡献表面积
 					total += grid[x][y]
 					continue
 				}
-				if grid[x][y] > grid[xx][yy] {	//比周围的形体高时，贡献表面积
+				if grid[x][y] > grid[xx][yy] { //比周围的形体高时，贡献表面积
 					total += grid[x][y] - grid[xx][yy]
 				}
 			}
