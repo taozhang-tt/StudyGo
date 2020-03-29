@@ -17,6 +17,7 @@ require (
 	github.com/peterh/liner v1.2.0 // indirect
 	github.com/spf13/cobra v0.0.6 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
 	go.etcd.io/etcd v3.3.19+incompatible
 	go.mongodb.org/mongo-driver v1.3.0
 	go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5 // indirect
