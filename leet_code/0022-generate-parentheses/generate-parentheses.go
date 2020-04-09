@@ -18,7 +18,7 @@ import "fmt"
 */
 
 func main() {
-	fmt.Println(generateParenthesis(4))
+	fmt.Println(generateParenthesis2(4))
 }
 
 /**
@@ -45,4 +45,24 @@ func generate(n, leftUsed, rightUsed int, curr string, ret []string) []string {
 		ret = generate(n, leftUsed, rightUsed+1, curr+")", ret)
 	}
 	return ret
+}
+
+
+func generateParenthesis2(n int) []string {
+	ret := make([]string, 0)
+	dfs(n, 0, 0, "", &ret)
+	return ret
+}
+
+func dfs(n, leftUsed, rightUsed int, curr string, ret *[]string) {
+	if leftUsed == n && rightUsed == n { //左括号数量 == 右括号数量 == n，说明是一个结果，保存下来
+		*ret = append(*ret, curr)
+		return
+	}
+	if leftUsed < n { //左括号是可以随时塞入的，只需要满足 左括号的数量 < n 即可
+		dfs(n, leftUsed+1, rightUsed, curr+"(", ret)
+	}
+	if rightUsed < leftUsed && rightUsed < n { //如果想塞入右括号，需要满足 右括号数量 < 左括号数量 && 右括号数量 < n
+		dfs(n, leftUsed, rightUsed+1, curr+")", ret)
+	}
 }
