@@ -5,7 +5,7 @@ go 1.13
 require (
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/coreos/etcd v3.3.19+incompatible
-	github.com/cosiner/argv v0.0.1 // indirect
+	github.com/cosiner/argv v0.0.1
 	github.com/elastic/go-elasticsearch/v7 v7.6.0
 	github.com/go-delve/delve v1.4.0 // indirect
 	github.com/golang/protobuf v1.3.5
