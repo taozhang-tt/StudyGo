@@ -50,6 +50,9 @@ func isPalindrome(head *ListNode) bool {
 
 /**
 反转链表的后半部分，然后比较和前半部分是否一致
+	1. 查找中点
+	2. 反转后半部分
+	3. 比较前半部分和后半部分
 */
 func isPalindrome2(head *ListNode) bool {
 
@@ -57,6 +60,10 @@ func isPalindrome2(head *ListNode) bool {
 
 func reverList(head *ListNode) *ListNode {
 	if head != nil 
+}
+
+func findMid(head *ListNode) *ListNode {
+	
 }
 
 type ListNode struct {

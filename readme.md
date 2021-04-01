@@ -12,3 +12,10 @@ GO 语言基础学习
 ## leet_code
 
 力扣刷题记录
+
+## design_pattern
+
+设计模式学习记录
+
+参考：
+>https://github.com/senghoo/golang-design-pattern

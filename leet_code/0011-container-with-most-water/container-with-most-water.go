@@ -17,7 +17,7 @@ func main() {
 	var height []int
 	var ret int
 	height = []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
-	ret = maxArea2(height)
+	ret = maxArea(height)
 	fmt.Println(ret)
 
 	height = []int{0, 0}
@@ -56,12 +56,12 @@ func maxArea(height []int) int {
 func maxArea2(height []int) int {
 	ret, l, r := 0, 0, len(height)-1
 	for l < r {
-		h := height[j]	//取两个边界的较小值
-		if height[i] < height[j] {
-			h = height[i]
+		h := height[l]	//取两个边界的较小值
+		if height[r] < height[l] {
+			h = height[r]
 		}
-		if h*(j-i) > ret {	//判断当前边界组成的容器容积与当前最大容积的关系
-			ret = h * (j - i)
+		if h*(l-r) > ret {	//判断当前边界组成的容器容积与当前最大容积的关系
+			ret = h * (l - r)
 		}
 		if height[l] < height[r] {	//如果左边界较小，左边界右移
 			l++
