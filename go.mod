@@ -23,7 +23,8 @@ require (
 	github.com/spf13/cobra v0.0.6 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
-	github.com/stretchr/testify v1.4.0
+	github.com/stretchr/testify v1.6.1
+	github.com/wechatpay-apiv3/wechatpay-go v0.1.3
 	go.etcd.io/etcd v3.3.19+incompatible
 	go.mongodb.org/mongo-driver v1.3.0
 	go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5 // indirect
